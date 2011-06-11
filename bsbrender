@@ -1,16 +1,16 @@
 #!/bin/bash
 . bsbrender.conf
 
-xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.svg ./osmarender/xslt/osmarender.xsl osmarender/stylesheets/osm-map-features-z$z.xml
+xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.svg ./osr/xslt/osmarender.xsl osr/stylesheets/osm-map-features-z$z.xml
 inkscape b$z.svg -d $dpi --export-png=b$z.png
-xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.sea.svg ./osmarender/xslt/osmarender.xsl renderer/SeaMapStyles/osm-seamark-z$z.xml 
+xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.sea.svg ./osr/xslt/osmarender.xsl osr/SeaMapStyles/osm-seamark-z$z.xml 
 inkscape b$z.sea.svg -d $dpi --export-png=b$z.sea.png
 composite b$z.sea.png b$z.png bala$z.png
 
-echo '<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><GroundOverlay>' >b14.kml
-echo "<name>Balaton</name><Icon><href>bala$z.png</href></Icon>" >>b14.kml
-echo "<LatLonBox><north>$maxlat</north><south>$minlat</south>" >>b14.kml
-echo "<east>$maxlon</east><west>$minlon</west><rotation>0</rotation>" >>b14.kml
+echo '<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><GroundOverlay>' >b$z.kml
+echo "<name>Balaton</name><Icon><href>bala$z.png</href></Icon>" >>b$z.kml
+echo "<LatLonBox><north>$maxlat</north><south>$minlat</south>" >>b$z.kml
+echo "<east>$maxlon</east><west>$minlon</west><rotation>0</rotation>" >>b$z.kml
 echo "</LatLonBox></GroundOverlay></kml>" >>b$z.kml
 
 ./imgkap b$z.kml $outname.kap
