@@ -1,0 +1,11 @@
+*.kml
+imgkap
+imgkap.c
+*.png
+*.svg
+*.kap
+renderer
+osmarender
+SeaMapStyles
+SeaMapSymbols
+svg_stack
