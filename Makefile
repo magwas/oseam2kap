@@ -24,9 +24,19 @@ osmarender:
 renderer:
 	svn co http://openseamap.svn.sourceforge.net/svnroot/openseamap/renderer
 
-setup: imgkap osmarender renderer cleanosr
+osr/composite: osr
+	./mkcomposites
+
+cleantmp:
+	rm -rf tmp
+
+osr: cleanosr
 	cp -r osmarender osr
 	cp -r renderer/* osr
+	cp -r renderer/SeaMapStyles/* osr/stylesheets
+	cp -r renderer/SeaMapSymbols/* osr/stylesheets/symbols
+
+setup: imgkap osmarender renderer cleanosr osr osr/composite cleantmp
 	mkdir tmp
 	 
 
