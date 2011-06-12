@@ -6,6 +6,5 @@ imgkap.c
 *.kap
 renderer
 osmarender
-SeaMapStyles
-SeaMapSymbols
 svg_stack
+osr

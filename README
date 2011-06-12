@@ -5,7 +5,6 @@ prerequisites:
 imgkap - see http://www.dacust.com/inlandwaters/imgkap/
 osmarender - svn co http://svn.openstreetmap.org/applications/rendering/osmarender/ 
 openseamap rendering styles - svn co http://openseamap.svn.sourceforge.net/svnroot/openseamap/renderer
-svg_stack - git clone https://github.com/astraw/svg_stack.git
 xsltproc - this should be part of any decent Linux distribution
 inkscape -  -+-
 imagemagick - -+-

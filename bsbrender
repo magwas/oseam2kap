@@ -1,10 +1,12 @@
 #!/bin/bash
 . bsbrender.conf
 
-xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.svg ./osr/xslt/osmarender.xsl osr/stylesheets/osm-map-features-z$z.xml
+#xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.svg ./osr/xslt/osmarender.xsl osr/stylesheets/osm-map-features-z$z.xml
+perl osmarender/orp/orp.pl -r osr/stylesheets/osm-map-features-z$z.xml -b $minlat,$minlon,$maxlat,$maxlon -o p$z.svg $osmfile
 inkscape b$z.svg -d $dpi --export-png=b$z.png
 extents=`file b$z.png |sed 's/^[^,]*, //;s/,.*//;s/ //g'`
-xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.sea.svg ./osr/xslt/osmarender.xsl osr/SeaMapStyles/osm-seamark-z$z.xml 
+#xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.sea.svg ./osr/xslt/osmarender.xsl osr/SeaMapStyles/osm-seamark-z$z.xml 
+perl osmarender/orp/orp.pl -r osr/SeaMapStyles/osm-seamark-z$z.xml -b $minlat,$minlon,$maxlat,$maxlon -o p$z.sea.svg $osmfile
 let twice="$dpi * 2"
 inkscape b$z.sea.svg -d $twice --export-png=b$z.sea.png
 convert b$z.sea.png -resize $extents b$z.r.png
