@@ -2,7 +2,7 @@ This is a simple tool to create a BSB file from any area.
 
 prerequisites:
 
-make, libfreeimage, bash, perl, libxml-writer-perl, libset-object-perl, libxml-perl, inkscape, vips
+gcc, make, libfreeimage, bash, perl, libxml-writer-perl, libset-object-perl, libxml-perl, inkscape, vips
 network connection
 
 Downoaded by the setup target:

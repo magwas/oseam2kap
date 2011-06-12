@@ -27,6 +27,7 @@ renderer:
 setup: imgkap osmarender renderer cleanosr
 	cp -r osmarender osr
 	cp -r renderer/* osr
+	mkdir tmp
 	 
 
 imgkap: imgkap.c
