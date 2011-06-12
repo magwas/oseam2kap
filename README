@@ -2,19 +2,27 @@ This is a simple tool to create a BSB file from any area.
 
 prerequisites:
 
+make, libfreeimage, bash, perl, libxml-writer-perl, libset-object-perl, libxml-perl, inkscape, vips
+network connection
+
+Downoaded by the setup target:
 imgkap - see http://www.dacust.com/inlandwaters/imgkap/
 osmarender - svn co http://svn.openstreetmap.org/applications/rendering/osmarender/ 
 openseamap rendering styles - svn co http://openseamap.svn.sourceforge.net/svnroot/openseamap/renderer
-xsltproc - this should be part of any decent Linux distribution
-inkscape -  -+-
-imagemagick - -+-
 
 setting up the environment:
-download and compile imgcap
-do the svn and git checkouts in this directory
+
+make setup
 
 usage:
 
-edit bsbrender.conf
-./bsbrender 
+./bsbrender <configfile>
+
+See example.conf for config file format
+
+examples:
+
+./bsbrender example.conf
+
+osmfile=/wherever/whatever.osm bsbrender whatever.conf
 

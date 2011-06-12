@@ -4,8 +4,11 @@ all:
 
 clean:  cleandata
 
-cleandownloaded:
-	rm -rf osmarender renderer
+cleanosr:
+	rm -rf osr
+
+cleandownloaded: cleanosr
+	rm -rf osmarender renderer imgkap.c imgkap
 
 cleandata:
 	rm -f tmp/*
@@ -15,9 +18,19 @@ cleanmaps: cleandata
 
 cleanall: cleandownloaded cleandata cleanmaps
 
-setup: cleandownloaded
+osmarender:
 	svn co http://svn.openstreetmap.org/applications/rendering/osmarender/
+
+renderer:
 	svn co http://openseamap.svn.sourceforge.net/svnroot/openseamap/renderer
+
+setup: imgkap osmarender renderer cleanosr
 	cp -r osmarender osr
 	cp -r renderer/* osr
-	
+	 
+
+imgkap: imgkap.c
+	gcc imgkap.c -lfreeimage -o imgkap
+    
+imgkap.c:
+	wget http://www.dacust.com/inlandwaters/imgkap/v00.01.11/imgkap.c
