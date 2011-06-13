@@ -4,28 +4,25 @@ set -x
 
 if [ "x$osmfile" = "x" ]
 then
-    wget http://jxapi.openstreetmap.org/xapi/api/0.6/map?bbox=$minlon,$minlat,$maxlon,$maxlat -O tmp/b$z.osm
+    wget http://jxapi.openstreetmap.org/xapi/api/0.6/map?bbox=$minlon,$minlat,$maxlon,$maxlat -O tmp/${outname}.osm
 fi
-osmfile=${osmfile:-tmp/b$z.osm}
+osmfile=${osmfile:-tmp/${outname}.osm}
 
-#xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o b$z.svg ./osr/xslt/osmarender.xsl osr/stylesheets/osm-map-features-z$z.xml
-perl osr/orp/orp.pl -r osr/stylesheets/composite-z$z.xml -b $minlat,$minlon,$maxlat,$maxlon -o tmp/b$z.svg $osmfile
-inkscape tmp/b$z.svg -d $dpi --export-png=tmp/bala$z.png
-#extents=`file tmp/b$z.png |sed 's/^[^,]*, //;s/,.*//;s/ x / /'`
-#xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o tmp/b$z.sea.svg ./osr/xslt/osmarender.xsl osr/SeaMapStyles/osm-seamark-z$z.xml 
-#perl osr/orp/orp.pl -r osr/SeaMapStyles/osm-seamark-z$z.xml -b $minlat,$minlon,$maxlat,$maxlon -o tmp/b$z.sea.svg $osmfile
-#let twice="$dpi * 4"
-#inkscape tmp/b$z.sea.svg -d $twice --export-png=tmp/b$z.sea.png
-#vips im_resize_linear tmp/b$z.sea.png tmp/b$z.r.png $extents
-#convert tmp/b$z.sea.png -resize $extents tmp/b$z.r.png
-#composite tmp/b$z.r.png tmp/b$z.png tmp/bala$z.png
+for zz in $z
+do
 
-echo '<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><GroundOverlay>' >tmp/b$z.kml
-echo "<name>Balaton</name><Icon><href>bala$z.png</href></Icon>" >>tmp/b$z.kml
-echo "<LatLonBox><north>$maxlat</north><south>$minlat</south>" >>tmp/b$z.kml
-echo "<east>$maxlon</east><west>$minlon</west><rotation>0</rotation>" >>tmp/b$z.kml
-echo "</LatLonBox></GroundOverlay></kml>" >>tmp/b$z.kml
+    perl osr/orp/orp.pl -r osr/stylesheets/composite-z$zz.xml -b $minlat,$minlon,$maxlat,$maxlon -o tmp/${outname}_$zz.svg $osmfile
+    d=`echo "$dpi*2^$zz" | bc -l`
+    inkscape tmp/${outname}_$zz.svg -d $d --export-png=tmp/${outname}_$zz.png
 
-./imgkap tmp/b$z.kml $outname.kap
-#rm tmp/b$z.svg tmp/b$z.png tmp/b$z.sea.svg tmp/b$z.sea.png tmp/bala$z.png tmp/b$z.kml tmp/b$z.r.png
+    echo '<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><GroundOverlay>' >tmp/${outname}_$zz.kml
+    echo "<name>Balaton</name><Icon><href>${outname}_$zz.png</href></Icon>" >>tmp/${outname}_$zz.kml
+    echo "<LatLonBox><north>$maxlat</north><south>$minlat</south>" >>tmp/${outname}_$zz.kml
+    echo "<east>$maxlon</east><west>$minlon</west><rotation>0</rotation>" >>tmp/${outname}_$zz.kml
+    echo "</LatLonBox></GroundOverlay></kml>" >>tmp/${outname}_$zz.kml
+
+    ./imgkap tmp/${outname}_$zz.kml ${outname}_$zz.kap
+
+done
+
 

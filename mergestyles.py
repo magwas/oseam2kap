@@ -29,6 +29,7 @@ for n in rules2.childNodes:
     rules1.appendChild(n.cloneNode(1))
 
 
+rules1.setAttribute("showGrid","yes")
 
 print dom1.toprettyxml()
 
