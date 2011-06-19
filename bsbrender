@@ -11,6 +11,11 @@ osmfile=${osmfile:-../../tmp/${outname}.osm}
 for zz in $z
 do
 
+    cat $osmfile | grep "user="| sed 's/^.*user=\"//;s/\".*//' |sort |uniq|awk '{printf("%s, ",$1);}' >tmp/${outname}_contributors
+    grep '<tag k="source"' $osmfile |sed 's/^.* v="//;s/".*//'|sort|uniq|awk '{printf("%s, ",$1);}' >tmp/${outname}_sources
+     cat $osmfile | grep "timestamp="| sed 's/^.*timestamp=\"//;s/\".*//' |sort|tail -1 >tmp/${outname}_timestamp
+
+
     #xsltproc --stringparam osmfile $osmfile --stringparam minlon $minlon --stringparam maxlon $maxlon --stringparam minlat $minlat --stringparam maxlat $maxlat -o tmp/${outname}_$zz.svg ./osr/xslt/osmarender.xsl osr/stylesheets/composite-z$zz.xml
     #or/p is screwed up copyrightwise
     perl osr/orp/orp.pl -r osr/stylesheets/composite-z$zz.xml -b $minlat,$minlon,$maxlat,$maxlon -o tmp/${outname}_$zz.svg $osmfile
