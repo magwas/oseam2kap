@@ -1,0 +1,178 @@
+#!/usr/bin/python
+# coding=UTF-8
+
+from math import cos,radians
+import sys
+import os
+import urllib2
+import xml.etree.cElementTree as ET
+
+
+
+class Converter:
+        def __init__(self,configfile):
+            
+            execfile(sys.argv[1],self.__dict__)
+        
+            for i in ['osmfile','name','dpi','n','scale','lat0','lon0']:
+                if os.environ.has_key(i):
+                    self.__dict__[i]=os.environ[i]
+            self.calculate()
+            self.writegpx()
+            self.getosm()
+            self.getcontributors()
+            print "---------------------------------------------"
+            print self.contributors
+            print "---------------------------------------------"
+            print self.sources
+            print "---------------------------------------------"
+            print self.timestamp
+            self.createsvg(16)
+            self.createpng(16)
+            self.createkap(16)
+        
+        def calculate(self):
+            #size in mm
+            xmm=int(1000/(2.0**((2.0*self.n-1)/4))+0.2)
+            ymm=int(1000/(2.0**((2.0*self.n+1)/4))+0.2)
+            
+            #size in points
+            self.xp=int(round(xmm*self.dpi/25.4))
+            self.yp=int(round(ymm*self.dpi/25.4))
+            print "size=%sx%s"%(self.xp,self.yp)
+            
+            #content in nm in real world
+            #size in points * scale = real size in points
+            #real size in points / dpi = real size in inches
+            #real size in inches * 25.4 = real size in mm
+            #real size in mm /1000 = real size in meters
+            #real size in meters / 1 852 = real size in nm
+            dx=self.xp*self.scale/self.dpi*25.4/1852000
+            dy=self.yp*self.scale/self.dpi*25.4/1852000
+            
+            self.lat1=self.lat0-(dy/60)
+            self.lon1=self.lon0+dx/60/cos(radians(self.lat0-dy/30))
+            
+        
+        def writegpx(self):
+            f=open("tmp/%s.gpx"%self.name,"w")
+            f.write("""<?xml version="1.0" encoding="utf-8"?>
+        <gpx version="1.1" creator="OpenCPN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xmlns:opencpn="http://www.opencpn.org">
+            <rte>
+                <name>%s</name>
+                <number>10</number>
+                <extensions>
+                    <opencpn:start></opencpn:start>
+                    <opencpn:end></opencpn:end>
+                    <opencpn:viz>1</opencpn:viz>
+                </extensions>
+                <rtept lat="%s" lon="%s">
+                    <time>2011-06-26T19:06:07Z</time>
+                    <name>001</name>
+                    <sym>diamond</sym>
+                    <type>WPT</type>
+                    <extensions>
+                        <opencpn:prop>A,1,1,0,1</opencpn:prop>
+                    </extensions>
+                </rtept>
+                <rtept lat="%s" lon="%s">
+                    <time>2011-06-26T19:06:08Z</time>
+                    <name>002</name>
+                    <sym>diamond</sym>
+                    <type>WPT</type>
+                    <extensions>
+                        <opencpn:prop>A,1,1,0,1</opencpn:prop>
+                    </extensions>
+                </rtept>
+                <rtept lat="%s" lon="%s">
+                    <time>2011-06-26T19:06:09Z</time>
+                    <name>003</name>
+                    <sym>diamond</sym>
+                    <type>WPT</type>
+                    <extensions>
+                        <opencpn:prop>A,1,1,0,1</opencpn:prop>
+                    </extensions>
+                </rtept>
+                <rtept lat="%s" lon="%s">
+                    <time>2011-06-26T19:06:09Z</time>
+                    <name>004</name>
+                    <sym>diamond</sym>
+                    <type>WPT</type>
+                    <extensions>
+                        <opencpn:prop>A,1,1,0,1</opencpn:prop>
+                    </extensions>
+                </rtept>
+                <rtept lat="%s" lon="%s">
+                    <time>2011-06-26T19:06:07Z</time>
+                    <name>001</name>
+                    <sym>diamond</sym>
+                    <type>WPT</type>
+                    <extensions>
+                        <opencpn:prop>A,1,1,0,1</opencpn:prop>
+                    </extensions>
+                </rtept>
+            </rte>
+        </gpx>"""%(self.name,
+            self.lat0,self.lon0,
+            self.lat0,self.lon1,
+            self.lat1,self.lon1,
+            self.lat1,self.lon0,
+            self.lat0,self.lon0))
+            f.close()
+
+        def getosm(self):
+            if not self.__dict__.has_key("osmfile"):
+                self.osmfile="tmp/%s.osm"%self.name
+                print "creating osm file %s"%self.osmfile
+                f = urllib2.urlopen("http://jxapi.openstreetmap.org/xapi/api/0.6/map?bbox=%s,%s,%s,%s"%(self.lon0,self.lat1,self.lon1,self.lat0))
+                of=open(self.osmfile,"w")
+                while True:
+                    d=f.read()
+                    if(d==''):
+                        break;
+                    of.write(d)
+
+        def getcontributors(self):
+            self.contributors=set()
+            self.sources=set()
+            ctx=ET.iterparse(self.osmfile,events=("start","end"))
+            print ctx
+            ctx=iter(ctx)
+            ts=''
+            print ctx.next()
+            print ctx
+            for i in ctx:
+                event,elem=i
+                if(elem.tag in ('node','way','relation')):
+                    self.contributors.add(elem.get("user"))
+                    t=elem.get("timestamp")
+                    if t > ts:
+                        ts=t
+                elif(elem.tag == 'tag'):
+                    if 'source' == elem.get('k'):
+                        self.sources.add(elem.get('v'))
+                elem.clear()
+            self.timestamp=ts
+ 
+        def createsvg(self,level):
+            """
+                xsltproc is slow, or/p is screwed up copyrightwise
+            """
+            cmd="xsltproc --stringparam osmfile %s --stringparam minlon %s --stringparam maxlon %s --stringparam minlat %s --stringparam maxlat %s -o tmp/%s_%s.svg ./osr/xslt/osmarender.xsl osr/stylesheets/composite-z%s.xml"%(self.osmfile,self.lon0,self.lon1,self.lat1,self.lat0,self.name,level,level)
+            cmd="perl osr/orp/orp.pl -r osr/stylesheets/composite-z%s.xml -b %s,%s,%s,%s -o tmp/%s_%s.svg %s"%(level,self.lat1,self.lon0,self.lat0,self.lon1,self.name,level,self.osmfile)
+            print cmd
+            os.system(cmd)
+
+        def createpng(self,level):
+            cmd="inkscape tmp/%s_%s.svg -w %s -h %s --export-png=tmp/%s_%s.png"%(self.name,level,self.xp,self.yp,self.name,level)
+            print cmd
+            os.system(cmd)
+
+
+        def createkap(self,level):
+            cmd="./imgkap tmp/%s_%s.png %s %s %s %s %s_%s.kap"%(self.name,level,self.lat0,self.lon0,self.lat1,self.lon1,self.name,level)
+            print cmd
+            os.system(cmd)
+                
+        
+Converter(sys.argv[1])

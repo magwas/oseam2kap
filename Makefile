@@ -41,6 +41,7 @@ setup: imgkap osmarender renderer cleanosr osr osr/composite cleantmp
 	 
 
 imgkap: imgkap.c
+    patch <imgkap.patch
 	gcc imgkap.c -lfreeimage -o imgkap
     
 imgkap.c:

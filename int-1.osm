@@ -1,213 +1,97 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <osm version='0.6' generator='JOSM'>
-  <node id='-825' visible='true' lat='-0.008463087338082098' lon='-0.015765762533701502' />
-  <node id='-823' visible='true' lat='-0.00837802345330177' lon='-0.0223156817325237' />
-  <node id='-821' visible='true' lat='-0.003699509767142503' lon='-0.02248580950392167' />
-  <node id='-820' visible='true' lat='-0.004039765309161943' lon='-0.01644627361929342' />
-  <node id='-796' action='modify' visible='true' lat='-0.007697512374411579' lon='-0.04043428938640844'>
-    <tag k='name' v='J15 Springs in seabed' />
+  <node id='-328' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.1' lon='-0.1' />
+  <node id='-326' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.1' lon='-0.1' />
+  <node id='-324' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.1' lon='0.1' />
+  <node id='-322' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09999999999998405' lon='0.0' />
+  <node id='-320' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.0999999999999944' lon='0.0' />
+  <node id='-318' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09999999999998405' lon='-0.05000000000000001' />
+  <node id='-316' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.0999999999999944' lon='-0.05000000000000001' />
+  <node id='-314' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09999999999998405' lon='0.05000000000000001' />
+  <node id='-312' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.0999999999999944' lon='0.05000000000000001' />
+  <node id='-310' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.033333330000000924' lon='-0.10000000000000002' />
+  <node id='-308' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.033333330000000924' lon='0.10000000000000002' />
+  <node id='-306' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.033333330000002166' lon='-0.10000000000000002' />
+  <node id='-304' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.033333330000002166' lon='0.10000000000000002' />
+  <node id='-302' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.06666666000000197' lon='-0.10000000000000002' />
+  <node id='-300' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.06666666000000197' lon='0.10000000000000002' />
+  <node id='-298' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-6.360956771389328E-15' lon='-0.10000000000000002' />
+  <node id='-296' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-6.360956771389328E-15' lon='0.10000000000000002' />
+  <node id='-294' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.06666666000000201' lon='-0.10000000000000002' />
+  <node id='-292' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.06666666000000201' lon='0.10000000000000002' />
+  <node id='-290' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.0999999999999944' lon='0.10000000000000002' />
+  <node id='-288' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09792672121987246' lon='-0.04681788403434571'>
+    <tag k='man_made' v='survey_point' />
+    <tag k='survey_point' v='triangulation_point' />
+  </node>
+  <node id='-286' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0980799710252595' lon='-0.044902258664691636'>
+    <tag k='name' v='B20 Triangulation Point' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-794' action='modify' visible='true' lat='-0.008037767913997662' lon='-0.045367994756949845'>
-    <tag k='seabed_surface' v='spring_in_seabed' />
-  </node>
-  <node id='-791' action='modify' visible='true' lat='-0.002736020363790749' lon='-0.04424521742633323' />
-  <node id='-790' action='modify' visible='true' lat='-0.006534404645815444' lon='-0.04748087812220749' />
-  <node id='-789' action='modify' visible='true' lat='-0.00505725520529424' lon='-0.0425570466284858' />
-  <node id='-788' action='modify' visible='true' lat='-0.0036504462111900168' lon='-0.048113942171400276' />
-  <node id='-787' action='modify' visible='true' lat='-0.004144089606457466' lon='-0.0404103863143257'>
-    <tag k='name' v='J14 Sandwaves' />
+  <node id='-284' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0952065370586881' lon='-0.04474900863511931'>
+    <tag k='name' v='B21 Observation Spot' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-774' action='modify' visible='true' lat='0.0036359136653375903' lon='-0.017368515133084975'>
-    <tag k='name' v='J13.2 Seabed Surface of Kelp' />
+  <node id='-282' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09520653705868626' lon='-0.04681788403434572'>
+    <tag k='man_made' v='survey_point' />
+    <tag k='survey_point' v='observation_spot' />
+  </node>
+  <node id='-280' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09271622742704305' lon='-0.04501719618687088'>
+    <tag k='name' v='B22 Fixed Point' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-773' action='modify' visible='true' lat='0.0027227480649823638' lon='-0.019515175447245108' />
-  <node id='-772' action='modify' visible='true' lat='0.0012455986177680037' lon='-0.02443900694096679' />
-  <node id='-771' action='modify' visible='true' lat='0.008490664927536836' lon='-0.021203346245092514' />
-  <node id='-770' action='modify' visible='true' lat='0.005043982906494195' lon='-0.021203346245092514' />
-  <node id='-769' action='modify' visible='true' lat='0.004129557060641631' lon='-0.02507207099015958' />
-  <node id='-768' action='modify' visible='true' lat='0.0046922806582315795' lon='-0.02443900694096679' />
-  <node id='-767' action='modify' visible='true' lat='0.007082595695338807' lon='-0.017368515133084975'>
-    <tag k='name' v='J13.1 Seabed Surface of Weed such as Kelp' />
+  <node id='-278' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09256297759778769' lon='-0.04693282155652495'>
+    <tag k='man_made' v='survey_point' />
+    <tag k='survey_point' v='fixed_point' />
+  </node>
+  <node id='-276' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09011098024038854' lon='-0.0470094465713111'>
+    <tag k='man_made' v='survey_point' />
+    <tag k='survey_point' v='benchmark' />
+  </node>
+  <node id='-274' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08995773040002446' lon='-0.04463407111294007'>
+    <tag k='name' v='B23 Benchmark' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-766' action='modify' visible='true' lat='0.007576239087738168' lon='-0.02507207099015958' />
-  <node id='-765' action='modify' visible='true' lat='0.0061694300996686' lon='-0.019515175447245108' />
-  <node id='-746' action='modify' visible='true' lat='0.010810639494478264' lon='-0.01849396233164994'>
-    <tag k='name' v='J11 Seabed Surface of Shells' />
+  <node id='-272' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08758235779276818' lon='-0.044634071112940106'>
+    <tag k='name' v='B24 Boundary mark' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-745' action='modify' visible='true' lat='0.014750964837698943' lon='-0.026197518188724532' />
-  <node id='-744' action='modify' visible='true' lat='0.012218708711236455' lon='-0.022328793443657475' />
-  <node id='-743' action='modify' visible='true' lat='0.008420324478411538' lon='-0.025564454139531744' />
-  <node id='-742' action='modify' visible='true' lat='0.01425732145708617' lon='-0.01849396233164994'>
-    <tag k='name' v='J10 Seabed Surface of Coral or Coraline Algea' />
+  <node id='-270' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08773560764300402' lon='-0.04700944657131113'>
+    <tag k='historic' v='boundary_stone' />
+  </node>
+  <node id='-268' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08505373517458222' lon='-0.044480821083367754'>
+    <tag k='name' v='B25.1 Distance mark without visible mark' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-741' action='modify' visible='true' lat='0.011867006469480093' lon='-0.025564454139531744' />
-  <node id='-740' action='modify' visible='true' lat='0.00989747390762931' lon='-0.02064062264581006' />
-  <node id='-739' action='modify' visible='true' lat='0.013344155881809526' lon='-0.02064062264581006' />
-  <node id='-738' action='modify' visible='true' lat='0.011304282881717831' lon='-0.026197518188724532' />
-  <node id='-737' action='modify' visible='true' lat='0.015665390654283327' lon='-0.022328793443657475' />
-  <node id='-712' action='modify' visible='true' lat='0.018373497856127533' lon='-0.020499941745989427' />
-  <node id='-711' action='modify' visible='true' lat='0.016896348478017603' lon='-0.025423773239711112' />
-  <node id='-710' action='modify' visible='true' lat='0.019286663408593543' lon='-0.01835328143182932'>
-    <tag k='name' v='J9.2 Seabed Surface of Boulders' />
+  <node id='-266' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08520698503500827' lon='-0.046856196541738775'>
+    <tag k='pk' v='km 32' />
+    <tag k='sign' v='no' />
+    <tag k='waterway' v='milestone' />
+  </node>
+  <node id='-264' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08260173732594245' lon='-0.044480821083367754'>
+    <tag k='name' v='B25.2 Distance mark with visible mark' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-709' action='modify' visible='true' lat='0.019780306776323538' lon='-0.026056837288903904' />
-  <node id='-708' action='modify' visible='true' lat='0.020694732568088205' lon='-0.02218811254383685' />
-  <node id='-706' action='modify' visible='true' lat='0.02182017968919076' lon='-0.020499941745989427' />
-  <node id='-705' action='modify' visible='true' lat='0.02034303034110332' lon='-0.025423773239711112' />
-  <node id='-704' action='modify' visible='true' lat='0.022733345221951178' lon='-0.01835328143182932'>
-    <tag k='name' v='J9.1 Seabed Surface of Rock or Rocky' />
-    <tag k='place' v='locality' />
+  <node id='-262' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08275498719597436' lon='-0.04674125901955955'>
+    <tag k='pk' v='km 32' />
+    <tag k='sign' v='yes' />
+    <tag k='waterway' v='milestone' />
   </node>
-  <node id='-703' action='modify' visible='true' lat='0.023226988578664058' lon='-0.026056837288903904' />
-  <node id='-702' action='modify' visible='true' lat='0.024141414349344692' lon='-0.02218811254383685' />
-  <node id='-700' action='modify' visible='true' lat='0.02582958498663027' lon='-0.020288920396258507' />
-  <node id='-699' action='modify' visible='true' lat='0.024352435680192703' lon='-0.02521275188998019' />
-  <node id='-698' action='modify' visible='true' lat='0.026742750492310036' lon='-0.018142260082098398'>
-    <tag k='name' v='J8 Seabed Surface of Cobbles' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-697' action='modify' visible='true' lat='0.027236393833959444' lon='-0.025845815939172984' />
-  <node id='-696' action='modify' visible='true' lat='0.028150819575950198' lon='-0.021977091194105926' />
-  <node id='-694' action='modify' visible='true' lat='0.030401713679109935' lon='-0.019374494547424476' />
-  <node id='-693' action='modify' visible='true' lat='0.028924564428995218' lon='-0.024298326041146158' />
-  <node id='-692' action='modify' visible='true' lat='0.03131487914845121' lon='-0.017227834233264367'>
-    <tag k='name' v='J7 Seabed Surface of Pebbles' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-691' action='modify' visible='true' lat='0.03180852246997298' lon='-0.02493139009033895' />
-  <node id='-690' action='modify' visible='true' lat='0.03272294817378263' lon='-0.0210626653452719' />
-  <node id='-688' action='modify' visible='true' lat='0.003953705936280906' lon='-0.042938545267378246' />
-  <node id='-687' action='modify' visible='true' lat='0.002476556490529142' lon='-0.04786237676109994' />
-  <node id='-686' action='modify' visible='true' lat='0.004866871535356616' lon='-0.040791884953218144'>
-    <tag k='name' v='J6 Seabed Surface of Gravel' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-685' action='modify' visible='true' lat='0.0053605149298083235' lon='-0.04849544081029273' />
-  <node id='-684' action='modify' visible='true' lat='0.006274940773900186' lon='-0.044626716065225676' />
-  <node id='-665' action='modify' visible='true' lat='0.01155047445147907' lon='-0.04216480031836483' />
-  <node id='-664' action='modify' visible='true' lat='0.007752090210924878' lon='-0.04540046101423909' />
-  <node id='-663' action='modify' visible='true' lat='0.009229239642776863' lon='-0.0404766295205174' />
-  <node id='-662' action='modify' visible='true' lat='0.0106360486198094' lon='-0.04603352506343188' />
-  <node id='-661' action='modify' visible='true' lat='0.010142405231503194' lon='-0.0383299692063573'>
-    <tag k='name' v='J5 Seabed Surface of Stones' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-659' action='modify' visible='true' lat='0.01640396534942157' lon='-0.04244616211800607' />
-  <node id='-658' action='modify' visible='true' lat='0.012605581176694575' lon='-0.045681822813880335' />
-  <node id='-657' action='modify' visible='true' lat='0.014082730584703993' lon='-0.040757991320158636' />
-  <node id='-656' action='modify' visible='true' lat='0.015489539536030137' lon='-0.046314886863073126' />
-  <node id='-655' action='modify' visible='true' lat='0.014995896157077424' lon='-0.038611331005998534'>
-    <tag k='name' v='J4 Seabed Surface of Silt' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-653' action='modify' visible='true' lat='0.021609158354597317' lon='-0.0433605879668401' />
-  <node id='-652' action='modify' visible='true' lat='0.0178107742849027' lon='-0.046596248662714355' />
-  <node id='-651' action='modify' visible='true' lat='0.019287923655562315' lon='-0.04167241716899267' />
-  <node id='-650' action='modify' visible='true' lat='0.020694732568100713' lon='-0.04722931271190715' />
-  <node id='-649' action='modify' visible='true' lat='0.020201089203115835' lon='-0.03952575685483257'>
-    <tag k='name' v='J3 Seabed Surface of Clay' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-647' action='modify' visible='true' lat='0.02688469162361191' lon='-0.04364194976648133' />
-  <node id='-646' action='modify' visible='true' lat='0.02308630769033506' lon='-0.046877610462355605' />
-  <node id='-645' action='modify' visible='true' lat='0.024563457010694942' lon='-0.041953778968633906' />
-  <node id='-644' action='modify' visible='true' lat='0.025970265872072382' lon='-0.04751067451154839' />
-  <node id='-643' action='modify' visible='true' lat='0.02547662252539847' lon='-0.03980711865447379'>
-    <tag k='name' v='J2 Seabed Surface of Mud' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-630' action='modify' visible='true' lat='0.029276266633179875' lon='-0.04167241716899267' />
-  <node id='-629' action='modify' visible='true' lat='0.03159750115252705' lon='-0.04336058796684011' />
-  <node id='-628' action='modify' visible='true' lat='0.02779911736832553' lon='-0.04659624866271437' />
-  <node id='-627' action='modify' visible='true' lat='0.030683075438761587' lon='-0.047229312711907154' />
-  <node id='-626' action='modify' visible='true' lat='0.030189432112003013' lon='-0.039525756854832575'>
-    <tag k='name' v='J1 Seabed Surface of Sand' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-613' visible='true' lat='0.030683075438766888' lon='0.0025547790080624254' />
-  <node id='-611' visible='true' lat='0.027799117368327395' lon='0.0031878430572552133' />
-  <node id='-609' visible='true' lat='0.029276266633177093' lon='0.008111674550976897' />
-  <node id='-608' visible='true' lat='0.03159750115253378' lon='0.006423503753129462' />
-  <node id='-607' action='modify' visible='true' lat='0.030189432112007714' lon='0.010258334865137'>
-    <tag k='name' v='K1 Danger Area' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-581' visible='true' lat='-0.10243217664311927' lon='-0.10356938829463723' />
-  <node id='-579' visible='true' lat='-0.10243217664311928' lon='0.10178372354834699' />
-  <node id='-577' visible='true' lat='0.10252130625474089' lon='0.10198348338477012' />
-  <node id='-576' action='modify' visible='true' lat='0.10252130625473777' lon='-0.10257058911252154' />
-  <node id='-554' action='modify' visible='true' lat='0.08246603688021144' lon='0.008813696571405972' />
-  <node id='-553' action='modify' visible='true' lat='0.08176589155901931' lon='0.004192732705577111' />
-  <node id='-552' action='modify' visible='true' lat='0.0815558479602725' lon='0.01147425152445896' />
-  <node id='-551' action='modify' visible='true' lat='0.08211596422114507' lon='0.005733053994186732' />
-  <node id='-550' action='modify' visible='true' lat='0.08547666161978405' lon='0.011404236920431255' />
-  <node id='-549' action='modify' visible='true' lat='0.08505657446080052' lon='0.004122718101549401' />
-  <node id='-548' action='modify' visible='true' lat='0.08134580436042968' lon='0.007273375282796355' />
-  <node id='-490' action='modify' visible='true' lat='0.08379631295652809' lon='0.015150018235913741'>
-    <tag k='name' v='C3 Steep Coast, Cliffs' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-474' action='modify' visible='true' lat='0.08855730064378647' lon='0.008638660061336696' />
-  <node id='-473' action='modify' visible='true' lat='0.0878571554332375' lon='0.0040176961955078324' />
-  <node id='-472' action='modify' visible='true' lat='0.08764711186749782' lon='0.011299215014389673' />
-  <node id='-471' action='modify' visible='true' lat='0.0882072280401611' lon='0.005558017484117454' />
-  <node id='-470' action='modify' visible='true' lat='0.09156792489726451' lon='0.011229200410361967' />
-  <node id='-469' action='modify' visible='true' lat='0.09114783780710908' lon='0.003947681591480122' />
-  <node id='-468' action='modify' visible='true' lat='0.0900976200603865' lon='0.014869959819802901'>
-    <tag k='name' v='C2 Inadequately Surveyed Coastline' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-467' action='modify' visible='true' lat='0.08743706830058741' lon='0.007098338772727074' />
-  <node id='-454' action='modify' visible='true' lat='0.09755416538617129' lon='0.01451988679966435'>
-    <tag k='name' v='C1 Surveyed Coastline' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-440' visible='true' lat='0.09825431040429021' lon='0.011299215014389685' />
-  <node id='-438' visible='true' lat='0.09433349811681414' lon='0.011369229618417393' />
-  <node id='-436' visible='true' lat='0.09524368672359299' lon='0.008708674665364409' />
-  <node id='-434' visible='true' lat='0.09412345458878382' lon='0.0071683533767547885' />
-  <node id='-432' visible='true' lat='0.0948936141853561' lon='0.0056280320881451655' />
-  <node id='-430' visible='true' lat='0.09454354164357671' lon='0.004087710799535544' />
-  <node id='-429' visible='true' lat='0.09783422339517277' lon='0.004017696195507834' />
-  <node id='-384' action='modify' visible='true' lat='0.09219475032215027' lon='-0.018015862258817576'>
-    <tag k='legend' v='Local Magnetic Anomaly\n(See NOTE A)' />
-    <tag k='natural' v='magnetic_variation' />
-  </node>
-  <node id='-383' action='modify' visible='true' lat='0.09227137523765565' lon='-0.014067113458044643'>
-    <tag k='name' v='B82.2 Local magnetic anomaly, text with reference to note' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-379' action='modify' visible='true' lat='0.09776420889314129' lon='-0.014396144663779923'>
-    <tag k='name' v='B82.1 Local magnetic anomaly' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-373' visible='true' lat='0.09842602093405557' lon='-0.017130779216141374' />
-  <node id='-371' visible='true' lat='0.09533940254688114' lon='-0.017217726337274072' />
-  <node id='-369' visible='true' lat='0.09460035303250258' lon='-0.020608664061449265' />
-  <node id='-367' visible='true' lat='0.09720876301216524' lon='-0.021825923757307027' />
-  <node id='-365' visible='true' lat='0.09890422939124545' lon='-0.0209999261065464' />
-  <node id='-353' action='modify' visible='true' lat='0.0992765847337147' lon='-0.019332333073986407'>
-    <tag k='annual_change' v='+8' />
-    <tag k='natural' v='magnetic_anomaly' />
-  </node>
-  <node id='-340' action='modify' visible='true' lat='0.07428793102103681' lon='-0.04735425913784885'>
-    <tag k='date' v='2007' />
+  <node id='-260' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.07976661462519267' lon='-0.04743088415263501'>
     <tag k='magnetic_variation:annual_change' v='+8' />
+    <tag k='magnetic_variation:date' v='2007' />
     <tag k='magnetic_variation:degree' v='4 30 W' />
     <tag k='natural' v='magnetic_variation' />
   </node>
-  <node id='-339' action='modify' visible='true' lat='0.07436455597135229' lon='-0.04459575860554698'>
-    <tag k='name' v='B70 Compass Rose' />
+  <node id='-258' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.07984323956565202' lon='-0.04467238362033314'>
+    <tag k='name' v='B68.1 Note of magnetic variation in position' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-338' action='modify' visible='true' lat='0.07727630398342725' lon='-0.04743088415263501'>
+  <node id='-256' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.07735292892846626' lon='-0.044672383620333135'>
+    <tag k='name' v='B68.2 Note of magnetic variation out of position' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-254' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.07727630398342725' lon='-0.04743088415263501'>
     <tag k='in_position' v='no' />
     <tag k='magnetic_variation:annual_change' v='+8' />
     <tag k='magnetic_variation:date' v='2007' />
@@ -215,410 +99,526 @@
     <tag k='natural' v='magnetic_variation' />
     <tag k='position' v='55 N 8 W' />
   </node>
-  <node id='-337' action='modify' visible='true' lat='0.07735292892846626' lon='-0.044672383620333135'>
-    <tag k='name' v='B68.2 Note of magnetic variation out of position' />
+  <node id='-252' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.07436455597135229' lon='-0.04459575860554698'>
+    <tag k='name' v='B70 Compass Rose' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-333' action='modify' visible='true' lat='0.07984323956565202' lon='-0.04467238362033314'>
-    <tag k='name' v='B68.1 Note of magnetic variation in position' />
-    <tag k='place' v='locality' />
-  </node>
-  <node id='-318' action='modify' visible='true' lat='0.07976661462519267' lon='-0.04743088415263501'>
+  <node id='-250' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.07428793102103681' lon='-0.04735425913784885'>
+    <tag k='date' v='2007' />
     <tag k='magnetic_variation:annual_change' v='+8' />
-    <tag k='magnetic_variation:date' v='2007' />
     <tag k='magnetic_variation:degree' v='4 30 W' />
     <tag k='natural' v='magnetic_variation' />
   </node>
-  <node id='-316' action='modify' visible='true' lat='0.08275498719597436' lon='-0.04674125901955955'>
-    <tag k='pk' v='km 32' />
-    <tag k='sign' v='yes' />
-    <tag k='waterway' v='milestone' />
+  <node id='-248' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0992765847337147' lon='-0.019332333073986407'>
+    <tag k='annual_change' v='+8' />
+    <tag k='natural' v='magnetic_anomaly' />
   </node>
-  <node id='-307' action='modify' visible='true' lat='0.08260173732594245' lon='-0.044480821083367754'>
-    <tag k='name' v='B25.2 Distance mark with visible mark' />
+  <node id='-246' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09890422939124545' lon='-0.0209999261065464' />
+  <node id='-244' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09720876301216524' lon='-0.021825923757307027' />
+  <node id='-242' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09460035303250258' lon='-0.020608664061449265' />
+  <node id='-240' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09533940254688114' lon='-0.017217726337274072' />
+  <node id='-238' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09842602093405557' lon='-0.017130779216141374' />
+  <node id='-236' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09776420889314129' lon='-0.014396144663779923'>
+    <tag k='name' v='B82.1 Local magnetic anomaly' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-306' action='modify' visible='true' lat='0.08520698503500827' lon='-0.046856196541738775'>
-    <tag k='pk' v='km 32' />
-    <tag k='sign' v='no' />
-    <tag k='waterway' v='milestone' />
-  </node>
-  <node id='-305' action='modify' visible='true' lat='0.08505373517458222' lon='-0.044480821083367754'>
-    <tag k='name' v='B25.1 Distance mark without visible mark' />
+  <node id='-234' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09227137523765565' lon='-0.014067113458044643'>
+    <tag k='name' v='B82.2 Local magnetic anomaly, text with reference to note' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-289' action='modify' visible='true' lat='0.08773560764300402' lon='-0.04700944657131113'>
-    <tag k='historic' v='boundary_stone' />
+  <node id='-232' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09219475032215027' lon='-0.018015862258817576'>
+    <tag k='legend' v='Local Magnetic Anomaly\n(See NOTE A)' />
+    <tag k='natural' v='magnetic_variation' />
   </node>
-  <node id='-288' action='modify' visible='true' lat='0.08758235779276818' lon='-0.044634071112940106'>
-    <tag k='name' v='B24 Boundary mark' />
+  <node id='-230' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09783422339517277' lon='0.004017696195507834' />
+  <node id='-228' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09454354164357671' lon='0.004087710799535544' />
+  <node id='-226' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0948936141853561' lon='0.0056280320881451655' />
+  <node id='-224' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09412345458878382' lon='0.0071683533767547885' />
+  <node id='-222' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09524368672359299' lon='0.008708674665364409' />
+  <node id='-220' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09433349811681414' lon='0.011369229618417393' />
+  <node id='-218' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09825431040429021' lon='0.011299215014389685' />
+  <node id='-216' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09755416538617129' lon='0.01451988679966435'>
+    <tag k='name' v='C1 Surveyed Coastline' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-275' action='modify' visible='true' lat='0.08995773040002446' lon='-0.04463407111294007'>
-    <tag k='name' v='B23 Benchmark' />
+  <node id='-214' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08743706830058741' lon='0.007098338772727074' />
+  <node id='-212' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0900976200603865' lon='0.014869959819802901'>
+    <tag k='name' v='C2 Inadequately Surveyed Coastline' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-274' action='modify' visible='true' lat='0.09011098024038854' lon='-0.0470094465713111'>
-    <tag k='man_made' v='survey_point' />
-    <tag k='survey_point' v='benchmark' />
-  </node>
-  <node id='-271' action='modify' visible='true' lat='0.09256297759778769' lon='-0.04693282155652495'>
-    <tag k='man_made' v='survey_point' />
-    <tag k='survey_point' v='fixed_point' />
-  </node>
-  <node id='-270' action='modify' visible='true' lat='0.09271622742704305' lon='-0.04501719618687088'>
-    <tag k='name' v='B22 Fixed Point' />
+  <node id='-210' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09114783780710908' lon='0.003947681591480122' />
+  <node id='-208' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.09156792489726451' lon='0.011229200410361967' />
+  <node id='-206' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0882072280401611' lon='0.005558017484117454' />
+  <node id='-204' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08764711186749782' lon='0.011299215014389673' />
+  <node id='-202' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0878571554332375' lon='0.0040176961955078324' />
+  <node id='-200' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08855730064378647' lon='0.008638660061336696' />
+  <node id='-198' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08379631295652809' lon='0.015150018235913741'>
+    <tag k='name' v='C3 Steep Coast, Cliffs' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-269' action='modify' visible='true' lat='0.09520653705868626' lon='-0.04681788403434572'>
-    <tag k='man_made' v='survey_point' />
-    <tag k='survey_point' v='observation_spot' />
-  </node>
-  <node id='-268' action='modify' visible='true' lat='0.0952065370586881' lon='-0.04474900863511931'>
-    <tag k='name' v='B21 Observation Spot' />
+  <node id='-196' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08134580436042968' lon='0.007273375282796355' />
+  <node id='-194' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08505657446080052' lon='0.004122718101549401' />
+  <node id='-192' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08547666161978405' lon='0.011404236920431255' />
+  <node id='-190' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08211596422114507' lon='0.005733053994186732' />
+  <node id='-188' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0815558479602725' lon='0.01147425152445896' />
+  <node id='-186' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08176589155901931' lon='0.004192732705577111' />
+  <node id='-184' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.08246603688021144' lon='0.008813696571405972' />
+  <node id='-182' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.10252130625473777' lon='-0.10257058911252154' />
+  <node id='-180' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.10252130625474089' lon='0.10198348338477012' />
+  <node id='-178' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.10243217664311928' lon='0.10178372354834699' />
+  <node id='-176' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.10243217664311927' lon='-0.10356938829463723' />
+  <node id='-174' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.030189432112007714' lon='0.010258334865137'>
+    <tag k='name' v='K1 Danger Area' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-263' action='modify' visible='true' lat='0.0980799710252595' lon='-0.044902258664691636'>
-    <tag k='name' v='B20 Triangulation Point' />
+  <node id='-172' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.03159750115253378' lon='0.006423503753129462' />
+  <node id='-170' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.029276266633177093' lon='0.008111674550976897' />
+  <node id='-168' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.027799117368327395' lon='0.0031878430572552133' />
+  <node id='-166' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.030683075438766888' lon='0.0025547790080624254' />
+  <node id='-164' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.030189432112003013' lon='-0.039525756854832575'>
+    <tag k='name' v='J1 Seabed Surface of Sand' />
     <tag k='place' v='locality' />
   </node>
-  <node id='-260' action='modify' visible='true' lat='0.09792672121987246' lon='-0.04681788403434571'>
-    <tag k='man_made' v='survey_point' />
-    <tag k='survey_point' v='triangulation_point' />
+  <node id='-162' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.030683075438761587' lon='-0.047229312711907154' />
+  <node id='-160' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02779911736832553' lon='-0.04659624866271437' />
+  <node id='-158' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.03159750115252705' lon='-0.04336058796684011' />
+  <node id='-156' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.029276266633179875' lon='-0.04167241716899267' />
+  <node id='-154' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02547662252539847' lon='-0.03980711865447379'>
+    <tag k='name' v='J2 Seabed Surface of Mud' />
+    <tag k='place' v='locality' />
   </node>
-  <node id='-152' action='modify' visible='true' lat='-0.0999999999999944' lon='0.10000000000000002' />
-  <node id='-56' action='modify' visible='true' lat='-0.06666666000000201' lon='0.10000000000000002' />
-  <node id='-54' action='modify' visible='true' lat='-0.06666666000000201' lon='-0.10000000000000002' />
-  <node id='-51' action='modify' visible='true' lat='-6.360956771389328E-15' lon='0.10000000000000002' />
-  <node id='-49' action='modify' visible='true' lat='-6.360956771389328E-15' lon='-0.10000000000000002' />
-  <node id='-46' action='modify' visible='true' lat='0.06666666000000197' lon='0.10000000000000002' />
-  <node id='-44' action='modify' visible='true' lat='0.06666666000000197' lon='-0.10000000000000002' />
-  <node id='-41' action='modify' visible='true' lat='-0.033333330000002166' lon='0.10000000000000002' />
-  <node id='-39' action='modify' visible='true' lat='-0.033333330000002166' lon='-0.10000000000000002' />
-  <node id='-36' action='modify' visible='true' lat='0.033333330000000924' lon='0.10000000000000002' />
-  <node id='-34' action='modify' visible='true' lat='0.033333330000000924' lon='-0.10000000000000002' />
-  <node id='-31' action='modify' visible='true' lat='-0.0999999999999944' lon='0.05000000000000001' />
-  <node id='-29' action='modify' visible='true' lat='0.09999999999998405' lon='0.05000000000000001' />
-  <node id='-26' action='modify' visible='true' lat='-0.0999999999999944' lon='-0.05000000000000001' />
-  <node id='-24' action='modify' visible='true' lat='0.09999999999998405' lon='-0.05000000000000001' />
-  <node id='-21' action='modify' visible='true' lat='-0.0999999999999944' lon='0.0' />
-  <node id='-19' action='modify' visible='true' lat='0.09999999999998405' lon='0.0' />
-  <node id='-9' action='modify' visible='true' lat='0.1' lon='0.1' />
-  <node id='-8' action='modify' visible='true' lat='0.1' lon='-0.1' />
-  <node id='-7' action='modify' visible='true' lat='-0.1' lon='-0.1' />
-  <way id='-822' action='modify' visible='true'>
-    <nd ref='-820' />
-    <nd ref='-821' />
-    <nd ref='-823' />
-    <nd ref='-825' />
-    <nd ref='-820' />
-    <tag k='natural' v='wood' />
-    <tag k='wood' v='deciduous' />
+  <node id='-152' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.025970265872072382' lon='-0.04751067451154839' />
+  <node id='-150' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.024563457010694942' lon='-0.041953778968633906' />
+  <node id='-148' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02308630769033506' lon='-0.046877610462355605' />
+  <node id='-146' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02688469162361191' lon='-0.04364194976648133' />
+  <node id='-144' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.020201089203115835' lon='-0.03952575685483257'>
+    <tag k='name' v='J3 Seabed Surface of Clay' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-142' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.020694732568100713' lon='-0.04722931271190715' />
+  <node id='-140' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.019287923655562315' lon='-0.04167241716899267' />
+  <node id='-138' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0178107742849027' lon='-0.046596248662714355' />
+  <node id='-136' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.021609158354597317' lon='-0.0433605879668401' />
+  <node id='-134' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.014995896157077424' lon='-0.038611331005998534'>
+    <tag k='name' v='J4 Seabed Surface of Silt' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-132' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.015489539536030137' lon='-0.046314886863073126' />
+  <node id='-130' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.014082730584703993' lon='-0.040757991320158636' />
+  <node id='-128' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.012605581176694575' lon='-0.045681822813880335' />
+  <node id='-126' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.01640396534942157' lon='-0.04244616211800607' />
+  <node id='-124' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.010142405231503194' lon='-0.0383299692063573'>
+    <tag k='name' v='J5 Seabed Surface of Stones' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-122' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0106360486198094' lon='-0.04603352506343188' />
+  <node id='-120' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.009229239642776863' lon='-0.0404766295205174' />
+  <node id='-118' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.007752090210924878' lon='-0.04540046101423909' />
+  <node id='-116' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.01155047445147907' lon='-0.04216480031836483' />
+  <node id='-114' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.006274940773900186' lon='-0.044626716065225676' />
+  <node id='-112' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0053605149298083235' lon='-0.04849544081029273' />
+  <node id='-110' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.004866871535356616' lon='-0.040791884953218144'>
+    <tag k='name' v='J6 Seabed Surface of Gravel' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-108' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.002476556490529142' lon='-0.04786237676109994' />
+  <node id='-106' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.003953705936280906' lon='-0.042938545267378246' />
+  <node id='-104' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.03272294817378263' lon='-0.0210626653452719' />
+  <node id='-102' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.03180852246997298' lon='-0.02493139009033895' />
+  <node id='-100' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.03131487914845121' lon='-0.017227834233264367'>
+    <tag k='name' v='J7 Seabed Surface of Pebbles' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-98' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.028924564428995218' lon='-0.024298326041146158' />
+  <node id='-96' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.030401713679109935' lon='-0.019374494547424476' />
+  <node id='-94' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.028150819575950198' lon='-0.021977091194105926' />
+  <node id='-92' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.027236393833959444' lon='-0.025845815939172984' />
+  <node id='-90' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.026742750492310036' lon='-0.018142260082098398'>
+    <tag k='name' v='J8 Seabed Surface of Cobbles' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-88' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.024352435680192703' lon='-0.02521275188998019' />
+  <node id='-86' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02582958498663027' lon='-0.020288920396258507' />
+  <node id='-84' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.024141414349344692' lon='-0.02218811254383685' />
+  <node id='-82' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.023226988578664058' lon='-0.026056837288903904' />
+  <node id='-80' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.022733345221951178' lon='-0.01835328143182932'>
+    <tag k='name' v='J9.1 Seabed Surface of Rock or Rocky' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-78' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02034303034110332' lon='-0.025423773239711112' />
+  <node id='-76' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.02182017968919076' lon='-0.020499941745989427' />
+  <node id='-74' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.020694732568088205' lon='-0.02218811254383685' />
+  <node id='-72' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.019780306776323538' lon='-0.026056837288903904' />
+  <node id='-70' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.019286663408593543' lon='-0.01835328143182932'>
+    <tag k='name' v='J9.2 Seabed Surface of Boulders' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-68' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.016896348478017603' lon='-0.025423773239711112' />
+  <node id='-66' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.018373497856127533' lon='-0.020499941745989427' />
+  <node id='-64' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.015665390654283327' lon='-0.022328793443657475' />
+  <node id='-62' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.011304282881717831' lon='-0.026197518188724532' />
+  <node id='-60' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.013344155881809526' lon='-0.02064062264581006' />
+  <node id='-58' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.00989747390762931' lon='-0.02064062264581006' />
+  <node id='-56' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.011867006469480093' lon='-0.025564454139531744' />
+  <node id='-54' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.01425732145708617' lon='-0.01849396233164994'>
+    <tag k='name' v='J10 Seabed Surface of Coral or Coraline Algea' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-52' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.008420324478411538' lon='-0.025564454139531744' />
+  <node id='-50' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.012218708711236455' lon='-0.022328793443657475' />
+  <node id='-48' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.014750964837698943' lon='-0.026197518188724532' />
+  <node id='-46' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.010810639494478264' lon='-0.01849396233164994'>
+    <tag k='name' v='J11 Seabed Surface of Shells' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-44' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0061694300996686' lon='-0.019515175447245108' />
+  <node id='-42' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.007576239087738168' lon='-0.02507207099015958' />
+  <node id='-40' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.007082595695338807' lon='-0.017368515133084975'>
+    <tag k='name' v='J13.1 Seabed Surface of Weed such as Kelp' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-38' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0046922806582315795' lon='-0.02443900694096679' />
+  <node id='-36' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.004129557060641631' lon='-0.02507207099015958' />
+  <node id='-34' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.005043982906494195' lon='-0.021203346245092514' />
+  <node id='-32' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.008490664927536836' lon='-0.021203346245092514' />
+  <node id='-30' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0012455986177680037' lon='-0.02443900694096679' />
+  <node id='-28' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0027227480649823638' lon='-0.019515175447245108' />
+  <node id='-26' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='0.0036359136653375903' lon='-0.017368515133084975'>
+    <tag k='name' v='J13.2 Seabed Surface of Kelp' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-24' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.004144089606457466' lon='-0.0404103863143257'>
+    <tag k='name' v='J14 Sandwaves' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-22' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.0036504462111900168' lon='-0.048113942171400276' />
+  <node id='-20' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.00505725520529424' lon='-0.0425570466284858' />
+  <node id='-18' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.006534404645815444' lon='-0.04748087812220749' />
+  <node id='-16' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.002736020363790749' lon='-0.04424521742633323' />
+  <node id='-14' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.008037767913997662' lon='-0.045367994756949845'>
+    <tag k='seabed_surface' v='spring_in_seabed' />
+  </node>
+  <node id='-12' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.007697512374411579' lon='-0.04043428938640844'>
+    <tag k='name' v='J15 Springs in seabed' />
+    <tag k='place' v='locality' />
+  </node>
+  <node id='-10' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.004039765309161943' lon='-0.01644627361929342' />
+  <node id='-8' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.003699509767142503' lon='-0.02248580950392167' />
+  <node id='-6' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.00837802345330177' lon='-0.0223156817325237' />
+  <node id='-4' timestamp='2011-06-19T06:21:44Z' visible='true' lat='-0.008463087338082098' lon='-0.015765762533701502' />
+  <way id='-398' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-324' />
+    <nd ref='-314' />
+    <nd ref='-322' />
+    <nd ref='-318' />
+    <nd ref='-326' />
+    <nd ref='-302' />
+    <nd ref='-310' />
+    <nd ref='-298' />
+    <nd ref='-306' />
+    <nd ref='-294' />
+    <nd ref='-328' />
+    <nd ref='-316' />
+    <nd ref='-320' />
+    <nd ref='-312' />
+    <nd ref='-290' />
+    <nd ref='-292' />
+    <nd ref='-304' />
+    <nd ref='-296' />
+    <nd ref='-308' />
+    <nd ref='-300' />
+    <nd ref='-324' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-792' action='modify' visible='true'>
-    <nd ref='-791' />
-    <nd ref='-789' />
-    <nd ref='-790' />
-    <nd ref='-788' />
-    <nd ref='-791' />
-    <tag k='seabed_surface' v='mobile_bottom' />
+  <way id='-396' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-322' />
+    <nd ref='-320' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-776' action='modify' visible='true'>
-    <nd ref='-770' />
-    <nd ref='-773' />
-    <nd ref='-772' />
-    <nd ref='-769' />
-    <nd ref='-770' />
-    <tag k='seabed_surface' v='kelp' />
+  <way id='-394' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-318' />
+    <nd ref='-316' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-775' action='modify' visible='true'>
-    <nd ref='-771' />
-    <nd ref='-765' />
-    <nd ref='-768' />
-    <nd ref='-766' />
-    <nd ref='-771' />
-    <tag k='seabed_surface' v='weed' />
+  <way id='-392' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-314' />
+    <nd ref='-312' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-748' action='modify' visible='true'>
-    <nd ref='-744' />
-    <nd ref='-740' />
-    <nd ref='-743' />
-    <nd ref='-738' />
-    <nd ref='-744' />
-    <tag k='seabed_surface' v='shells' />
+  <way id='-390' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-310' />
+    <nd ref='-308' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-747' action='modify' visible='true'>
-    <nd ref='-737' />
-    <nd ref='-739' />
-    <nd ref='-741' />
-    <nd ref='-745' />
-    <nd ref='-737' />
-    <tag k='seabed_surface' v='coral' />
+  <way id='-388' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-306' />
+    <nd ref='-304' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-713' action='modify' visible='true'>
-    <nd ref='-708' />
-    <nd ref='-712' />
-    <nd ref='-711' />
-    <nd ref='-709' />
-    <nd ref='-708' />
-    <tag k='seabed_surface' v='boulders' />
+  <way id='-386' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-302' />
+    <nd ref='-300' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-707' action='modify' visible='true'>
-    <nd ref='-702' />
-    <nd ref='-706' />
-    <nd ref='-705' />
-    <nd ref='-703' />
-    <nd ref='-702' />
-    <tag k='seabed_surface' v='rocky' />
+  <way id='-384' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-298' />
+    <nd ref='-296' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-701' action='modify' visible='true'>
-    <nd ref='-696' />
-    <nd ref='-700' />
-    <nd ref='-699' />
-    <nd ref='-697' />
-    <nd ref='-696' />
-    <tag k='seabed_surface' v='cobbles' />
+  <way id='-382' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-294' />
+    <nd ref='-292' />
+    <tag k='highway' v='residential' />
+    <tag k='lanes' v='1' />
+    <tag k='surface' v='paved' />
   </way>
-  <way id='-695' action='modify' visible='true'>
-    <nd ref='-690' />
-    <nd ref='-694' />
-    <nd ref='-693' />
-    <nd ref='-691' />
-    <nd ref='-690' />
-    <tag k='seabed_surface' v='pebbles' />
-  </way>
-  <way id='-689' action='modify' visible='true'>
-    <nd ref='-684' />
-    <nd ref='-688' />
-    <nd ref='-687' />
-    <nd ref='-685' />
-    <nd ref='-684' />
-    <tag k='seabed_surface' v='gravel' />
-  </way>
-  <way id='-666' action='modify' visible='true'>
-    <nd ref='-665' />
-    <nd ref='-663' />
-    <nd ref='-664' />
-    <nd ref='-662' />
-    <nd ref='-665' />
-    <tag k='seabed_surface' v='stones' />
-  </way>
-  <way id='-660' action='modify' visible='true'>
-    <nd ref='-659' />
-    <nd ref='-657' />
-    <nd ref='-658' />
-    <nd ref='-656' />
-    <nd ref='-659' />
-    <tag k='seabed_surface' v='silt' />
-  </way>
-  <way id='-654' action='modify' visible='true'>
-    <nd ref='-653' />
-    <nd ref='-651' />
-    <nd ref='-652' />
-    <nd ref='-650' />
-    <nd ref='-653' />
-    <tag k='seabed_surface' v='clay' />
-  </way>
-  <way id='-648' action='modify' visible='true'>
-    <nd ref='-647' />
-    <nd ref='-645' />
-    <nd ref='-646' />
-    <nd ref='-644' />
-    <nd ref='-647' />
-    <tag k='seabed_surface' v='mud' />
-  </way>
-  <way id='-631' action='modify' visible='true'>
-    <nd ref='-629' />
-    <nd ref='-630' />
-    <nd ref='-628' />
-    <nd ref='-627' />
-    <nd ref='-629' />
-    <tag k='seabed_surface' v='sand' />
-  </way>
-  <way id='-610' action='modify' visible='true'>
-    <nd ref='-608' />
-    <nd ref='-609' />
-    <nd ref='-611' />
-    <nd ref='-613' />
-    <nd ref='-608' />
-    <tag k='dangerline' v='nature of danger' />
-  </way>
-  <way id='-578' action='modify' visible='true'>
-    <nd ref='-576' />
-    <nd ref='-577' />
-    <nd ref='-579' />
-    <nd ref='-581' />
-    <nd ref='-576' />
-    <tag k='natural' v='water' />
-  </way>
-  <way id='-557' action='modify' visible='true'>
-    <nd ref='-553' />
-    <nd ref='-551' />
-    <nd ref='-548' />
-    <nd ref='-554' />
-    <nd ref='-552' />
-    <tag k='natural' v='cliff' />
-  </way>
-  <way id='-556' action='modify' visible='true'>
-    <nd ref='-553' />
-    <nd ref='-551' />
-    <nd ref='-548' />
-    <nd ref='-554' />
-    <nd ref='-552' />
-    <nd ref='-550' />
-    <nd ref='-549' />
-    <nd ref='-553' />
-    <tag k='coastline:survey_quality' v='complete' />
-    <tag k='natural' v='coastline' />
-  </way>
-  <way id='-555' action='modify' visible='true'>
-    <nd ref='-549' />
-    <nd ref='-553' />
-    <nd ref='-551' />
-    <nd ref='-548' />
-    <nd ref='-554' />
-    <nd ref='-552' />
-    <nd ref='-550' />
-    <nd ref='-549' />
-    <tag k='natural' v='land' />
-  </way>
-  <way id='-476' action='modify' visible='true'>
-    <nd ref='-473' />
-    <nd ref='-471' />
-    <nd ref='-467' />
-    <nd ref='-474' />
-    <nd ref='-472' />
-    <nd ref='-470' />
-    <nd ref='-469' />
-    <nd ref='-473' />
-    <tag k='coastline:survey_quality' v='inadequate' />
-    <tag k='natural' v='coastline' />
-  </way>
-  <way id='-475' action='modify' visible='true'>
-    <nd ref='-469' />
-    <nd ref='-473' />
-    <nd ref='-471' />
-    <nd ref='-467' />
-    <nd ref='-474' />
-    <nd ref='-472' />
-    <nd ref='-470' />
-    <nd ref='-469' />
-    <tag k='natural' v='land' />
-  </way>
-  <way id='-443' action='modify' visible='true'>
-    <nd ref='-430' />
-    <nd ref='-432' />
-    <nd ref='-434' />
-    <nd ref='-436' />
-    <nd ref='-438' />
-    <nd ref='-440' />
-    <nd ref='-429' />
-    <nd ref='-430' />
-    <tag k='coastline:survey_quality' v='complete' />
-    <tag k='natural' v='coastline' />
-  </way>
-  <way id='-431' action='modify' visible='true'>
-    <nd ref='-429' />
-    <nd ref='-430' />
-    <nd ref='-432' />
-    <nd ref='-434' />
-    <nd ref='-436' />
-    <nd ref='-438' />
-    <nd ref='-440' />
-    <nd ref='-429' />
-    <tag k='natural' v='land' />
-  </way>
-  <way id='-366' action='modify' visible='true'>
-    <nd ref='-353' />
-    <nd ref='-365' />
-    <nd ref='-367' />
-    <nd ref='-369' />
-    <nd ref='-371' />
-    <nd ref='-373' />
-    <nd ref='-353' />
+  <way id='-380' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-248' />
+    <nd ref='-246' />
+    <nd ref='-244' />
+    <nd ref='-242' />
+    <nd ref='-240' />
+    <nd ref='-238' />
+    <nd ref='-248' />
     <tag k='deviation' v='15' />
     <tag k='natural' v='magnetic_anomaly' />
   </way>
-  <way id='-57' action='modify' visible='true'>
-    <nd ref='-54' />
-    <nd ref='-56' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-378' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-230' />
+    <nd ref='-228' />
+    <nd ref='-226' />
+    <nd ref='-224' />
+    <nd ref='-222' />
+    <nd ref='-220' />
+    <nd ref='-218' />
+    <nd ref='-230' />
+    <tag k='natural' v='land' />
   </way>
-  <way id='-52' action='modify' visible='true'>
-    <nd ref='-49' />
-    <nd ref='-51' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-376' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-228' />
+    <nd ref='-226' />
+    <nd ref='-224' />
+    <nd ref='-222' />
+    <nd ref='-220' />
+    <nd ref='-218' />
+    <nd ref='-230' />
+    <nd ref='-228' />
+    <tag k='coastline:survey_quality' v='complete' />
+    <tag k='natural' v='coastline' />
   </way>
-  <way id='-47' action='modify' visible='true'>
-    <nd ref='-44' />
-    <nd ref='-46' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-374' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-210' />
+    <nd ref='-202' />
+    <nd ref='-206' />
+    <nd ref='-214' />
+    <nd ref='-200' />
+    <nd ref='-204' />
+    <nd ref='-208' />
+    <nd ref='-210' />
+    <tag k='natural' v='land' />
   </way>
-  <way id='-42' action='modify' visible='true'>
-    <nd ref='-39' />
-    <nd ref='-41' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-372' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-202' />
+    <nd ref='-206' />
+    <nd ref='-214' />
+    <nd ref='-200' />
+    <nd ref='-204' />
+    <nd ref='-208' />
+    <nd ref='-210' />
+    <nd ref='-202' />
+    <tag k='coastline:survey_quality' v='inadequate' />
+    <tag k='natural' v='coastline' />
   </way>
-  <way id='-37' action='modify' visible='true'>
-    <nd ref='-34' />
-    <nd ref='-36' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-370' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-194' />
+    <nd ref='-186' />
+    <nd ref='-190' />
+    <nd ref='-196' />
+    <nd ref='-184' />
+    <nd ref='-188' />
+    <nd ref='-192' />
+    <nd ref='-194' />
+    <tag k='natural' v='land' />
   </way>
-  <way id='-32' action='modify' visible='true'>
-    <nd ref='-29' />
-    <nd ref='-31' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-368' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-186' />
+    <nd ref='-190' />
+    <nd ref='-196' />
+    <nd ref='-184' />
+    <nd ref='-188' />
+    <nd ref='-192' />
+    <nd ref='-194' />
+    <nd ref='-186' />
+    <tag k='coastline:survey_quality' v='complete' />
+    <tag k='natural' v='coastline' />
   </way>
-  <way id='-27' action='modify' visible='true'>
-    <nd ref='-24' />
-    <nd ref='-26' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-366' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-186' />
+    <nd ref='-190' />
+    <nd ref='-196' />
+    <nd ref='-184' />
+    <nd ref='-188' />
+    <tag k='natural' v='cliff' />
   </way>
-  <way id='-22' action='modify' visible='true'>
-    <nd ref='-19' />
-    <nd ref='-21' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+  <way id='-364' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-182' />
+    <nd ref='-180' />
+    <nd ref='-178' />
+    <nd ref='-176' />
+    <nd ref='-182' />
+    <tag k='natural' v='water' />
   </way>
-  <way id='-10' action='modify' visible='true'>
-    <nd ref='-9' />
-    <nd ref='-29' />
-    <nd ref='-19' />
-    <nd ref='-24' />
-    <nd ref='-8' />
-    <nd ref='-44' />
-    <nd ref='-34' />
-    <nd ref='-49' />
-    <nd ref='-39' />
-    <nd ref='-54' />
-    <nd ref='-7' />
-    <nd ref='-26' />
-    <nd ref='-21' />
-    <nd ref='-31' />
+  <way id='-362' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-172' />
+    <nd ref='-170' />
+    <nd ref='-168' />
+    <nd ref='-166' />
+    <nd ref='-172' />
+    <tag k='dangerline' v='nature of danger' />
+  </way>
+  <way id='-360' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-158' />
+    <nd ref='-156' />
+    <nd ref='-160' />
+    <nd ref='-162' />
+    <nd ref='-158' />
+    <tag k='seabed_surface' v='sand' />
+  </way>
+  <way id='-358' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-146' />
+    <nd ref='-150' />
+    <nd ref='-148' />
     <nd ref='-152' />
+    <nd ref='-146' />
+    <tag k='seabed_surface' v='mud' />
+  </way>
+  <way id='-356' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-136' />
+    <nd ref='-140' />
+    <nd ref='-138' />
+    <nd ref='-142' />
+    <nd ref='-136' />
+    <tag k='seabed_surface' v='clay' />
+  </way>
+  <way id='-354' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-126' />
+    <nd ref='-130' />
+    <nd ref='-128' />
+    <nd ref='-132' />
+    <nd ref='-126' />
+    <tag k='seabed_surface' v='silt' />
+  </way>
+  <way id='-352' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-116' />
+    <nd ref='-120' />
+    <nd ref='-118' />
+    <nd ref='-122' />
+    <nd ref='-116' />
+    <tag k='seabed_surface' v='stones' />
+  </way>
+  <way id='-350' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-114' />
+    <nd ref='-106' />
+    <nd ref='-108' />
+    <nd ref='-112' />
+    <nd ref='-114' />
+    <tag k='seabed_surface' v='gravel' />
+  </way>
+  <way id='-348' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-104' />
+    <nd ref='-96' />
+    <nd ref='-98' />
+    <nd ref='-102' />
+    <nd ref='-104' />
+    <tag k='seabed_surface' v='pebbles' />
+  </way>
+  <way id='-346' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-94' />
+    <nd ref='-86' />
+    <nd ref='-88' />
+    <nd ref='-92' />
+    <nd ref='-94' />
+    <tag k='seabed_surface' v='cobbles' />
+  </way>
+  <way id='-344' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-84' />
+    <nd ref='-76' />
+    <nd ref='-78' />
+    <nd ref='-82' />
+    <nd ref='-84' />
+    <tag k='seabed_surface' v='rocky' />
+  </way>
+  <way id='-342' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-74' />
+    <nd ref='-66' />
+    <nd ref='-68' />
+    <nd ref='-72' />
+    <nd ref='-74' />
+    <tag k='seabed_surface' v='boulders' />
+  </way>
+  <way id='-340' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-64' />
+    <nd ref='-60' />
     <nd ref='-56' />
-    <nd ref='-41' />
-    <nd ref='-51' />
+    <nd ref='-48' />
+    <nd ref='-64' />
+    <tag k='seabed_surface' v='coral' />
+  </way>
+  <way id='-338' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-50' />
+    <nd ref='-58' />
+    <nd ref='-52' />
+    <nd ref='-62' />
+    <nd ref='-50' />
+    <tag k='seabed_surface' v='shells' />
+  </way>
+  <way id='-336' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-32' />
+    <nd ref='-44' />
+    <nd ref='-38' />
+    <nd ref='-42' />
+    <nd ref='-32' />
+    <tag k='seabed_surface' v='weed' />
+  </way>
+  <way id='-334' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-34' />
+    <nd ref='-28' />
+    <nd ref='-30' />
     <nd ref='-36' />
-    <nd ref='-46' />
-    <nd ref='-9' />
-    <tag k='highway' v='residential' />
-    <tag k='lanes' v='1' />
-    <tag k='surface' v='paved' />
+    <nd ref='-34' />
+    <tag k='seabed_surface' v='kelp' />
+  </way>
+  <way id='-332' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-16' />
+    <nd ref='-20' />
+    <nd ref='-18' />
+    <nd ref='-22' />
+    <nd ref='-16' />
+    <tag k='seabed_surface' v='mobile_bottom' />
+  </way>
+  <way id='-330' action='modify' timestamp='2011-06-19T06:21:44Z' visible='true'>
+    <nd ref='-10' />
+    <nd ref='-8' />
+    <nd ref='-6' />
+    <nd ref='-4' />
+    <nd ref='-10' />
+    <tag k='natural' v='wood' />
+    <tag k='wood' v='deciduous' />
   </way>
 </osm>

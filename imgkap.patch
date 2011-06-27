@@ -1,0 +1,81 @@
+--- imgkap.c	2011-05-17 14:41:00.000000000 +0200
++++ imgkap.new	2011-06-27 01:56:11.000000000 +0200
+@@ -49,7 +49,7 @@
+ #define FIF_KML 1027
+ 
+ 
+-int imgtokap(int typein,char *filein, double lat0, double lon0, double lat1, double lon1, int optkap,int color,char *title, int units, char *sd,char *fileout);
++int imgtokap(int typein,char *filein, double lat0, double lon0, double lat1, double lon1, int optkap,int color,char *title, int units, char *sd,char * sc,char *fileout);
+ int imgheadertokap(int typein,char *filein,int typeheader,int optkap,int color,char *title,char *fileheader,char *fileout);
+ int kaptoimg(int typein,char *filein,int typeheader,char *fileheader,int typeout,char *fileout,char *optionpal);
+ 
+@@ -1584,7 +1584,7 @@
+     return result;
+ }
+ 
+-int imgtokap(int typein,char *filein, double lat0, double lon0, double lat1, double lon1,int optkap, int color, char *title,int units, char *sd,char *fileout)
++int imgtokap(int typein,char *filein, double lat0, double lon0, double lat1, double lon1,int optkap, int color, char *title,int units, char *sd,char * sc,char *fileout)
+ {
+     uint16_t    dpi,widthout,heightout;
+  	uint32_t    widthin,heightin;
+@@ -1696,7 +1696,11 @@
+     dy = postod(lat0,lon0,lat1,lon0);
+     fprintf(out,"! Size in milles %.2f x %.2f\r\n",dx,dy) ;
+ 
+-    scale = round(dy*18520000.0*dpi/(heightout*254));
++    if(sc) {
++        scale=atoi(sc);
++    } else {
++        scale = round(dy*18520000.0*dpi/(heightout*254));
++    }
+ 
+     if (units == METTERS)
+     {
+@@ -2093,6 +2097,7 @@
+  	char    fileout[1024];
+  	int     typein, typeheader,typeout;
+     char    *optionsd ;
++    char    *optionsc ;
+     int     optionunits = METTERS;
+     int     optionkap = NORMAL;
+     int     optcolor;
+@@ -2102,6 +2107,7 @@
+     double  l;
+ 
+     optionsd = (char *)"UNKNOWN" ;
++    optionsc = NULL ;
+     optionpal = NULL;
+ 
+     typein = typeheader = typeout = FIF_UNKNOWN;
+@@ -2133,6 +2139,13 @@
+                 argv++;
+                 continue;
+             }
++            if (c == 'Q')
++            {
++                if (argc > 1) optionsc = argv[1];
++                argc--;
++                argv++;
++                continue;
++            }
+             if (c == 'T')
+             {
+                 if (argc > 1) strcpy(optiontitle,argv[1]);
+@@ -2222,7 +2235,7 @@
+                 typein = (int)FreeImage_GetFileType(filein,0);
+                 optcolor = COLOR_NONE;
+                 if (optionpal) optcolor = findoptlist(listoptcolor,optionpal);
+-                result = imgtokap(typein,filein,lat0,lon0,lat1,lon1,optionkap,optcolor,optiontitle,optionunits,optionsd,fileout);
++                result = imgtokap(typein,filein,lat0,lon0,lat1,lon1,optionkap,optcolor,optiontitle,optionunits,optionsd,optionsc,fileout);
+                 break;
+ 
+             case FIF_KAP :
+@@ -2291,7 +2304,7 @@
+                         result = 1;
+                         break;
+                     }
+-                    result = imgtokap(typein,filein,lat0,lon0,lat1,lon1,optionkap,optcolor,optiontitle,optionunits,optionsd,fileout);
++                    result = imgtokap(typein,filein,lat0,lon0,lat1,lon1,optionkap,optcolor,optiontitle,optionunits,optionsd,optionsc,fileout);
+                 break;
+         }
+         FreeImage_DeInitialise();
