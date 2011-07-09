@@ -6,8 +6,59 @@ import sys
 import os
 import urllib2
 import xml.etree.cElementTree as ET
+import time
 
 
+class Svg:
+    def __init__(self,fname):
+        self.fname=fname
+        self.dom=ET.parse(fname)
+        self.root=self.dom.getroot()
+
+    def addtext(self,x,y,size,txt,transform=None,style=None):
+            """
+                    <image x="200" y="000" width="100" height="100" xlink:href="OpenSeaMap-Logo.svg"/>-->
+                    <text x="250" y="110" font-size="20" text-anchor="middle">http://openstreetmap.org/</text>
+            svgimage(x0+00,y0+000,"OpenSeaMap-Logo.svg")
+            svgtext(x0+50,y0+110,20,"http://openstreetmap.org/")
+            """
+            t=self.root.makeelement('{http://www.w3.org/2000/svg}text',{'x':str(x),'y':str(y),'font-size':str(size), 'text-anchor':'middle'})
+            if transform:
+                t.set("transform",transform)
+            if style:
+                t.set("style",style)
+            t.text=txt
+            self.root.append(t)
+            return t
+
+
+    def addimage(self,x,y,fname,sizex=100,sizey=100):
+            t=self.root.makeelement('{http://www.w3.org/2000/svg}image',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey),'{http://www.w3.org/1999/xlink}href':fname})
+            self.root.append(t)
+            return t
+
+    def addrectangle(self,x,y,sizex,sizey,style="fill:white;"):
+            t=self.root.makeelement('{http://www.w3.org/2000/svg}rect',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey),'style':style})
+            self.root.append(t)
+            return t
+
+    def addflowtext(self,x,y,sizex,sizey,text,fontsize=12,style="stroke:black;",transform=None):
+            root=self.root.makeelement('{http://www.w3.org/2000/svg}flowRoot',{'font-size':str(fontsize),'style':style})
+            if transform:
+                root.set("transform",transform)
+            self.root.append(root)
+            region=self.root.makeelement('{http://www.w3.org/2000/svg}flowRegion',{})
+            root.append(region)
+            rect=self.root.makeelement('{http://www.w3.org/2000/svg}rect',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey)})
+            region.append(rect)
+            para=self.root.makeelement('{http://www.w3.org/2000/svg}flowPara',{})
+            para.text=text
+            root.append(para)
+            return root
+
+
+    def write(self):
+            self.dom.write(self.fname)
 
 class Converter:
         def __init__(self,configfile):
@@ -28,6 +79,9 @@ class Converter:
             print "---------------------------------------------"
             print self.timestamp
             self.createsvg(16)
+            self.addtitle(self.titlepos[0],self.titlepos[1])
+            self.addmarginalia()
+            self.svg.write()
             self.createpng(16)
             self.createkap(16)
         
@@ -133,26 +187,36 @@ class Converter:
                     of.write(d)
 
         def getcontributors(self):
-            self.contributors=set()
-            self.sources=set()
+            contributors=set()
+            sources=set()
             ctx=ET.iterparse(self.osmfile,events=("start","end"))
-            print ctx
+            #print ctx
             ctx=iter(ctx)
             ts=''
-            print ctx.next()
-            print ctx
+            #print ctx.next()
+            #print ctx
             for i in ctx:
                 event,elem=i
                 if(elem.tag in ('node','way','relation')):
-                    self.contributors.add(elem.get("user"))
+                    contributors.add(elem.get("user"))
                     t=elem.get("timestamp")
                     if t > ts:
                         ts=t
                 elif(elem.tag == 'tag'):
                     if 'source' == elem.get('k'):
-                        self.sources.add(elem.get('v'))
+                        sources.add(elem.get('v'))
                 elem.clear()
             self.timestamp=ts
+            if None in contributors:
+                contributors.remove(None)
+            l=list(contributors)
+            l.sort()
+            self.contributors=l
+            if None in sources:
+                sources.remove(None)
+            s=list(sources)
+            s.sort()
+            self.sources=s
  
         def createsvg(self,level):
             """
@@ -162,6 +226,7 @@ class Converter:
             cmd="perl osr/orp/orp.pl -r osr/stylesheets/composite-z%s.xml -b %s,%s,%s,%s -o tmp/%s_%s.svg %s"%(level,self.lat1,self.lon0,self.lat0,self.lon1,self.name,level,self.osmfile)
             print cmd
             os.system(cmd)
+            self.svg=Svg("tmp/%s_%s.svg"%(self.name,level))
 
         def createpng(self,level):
             cmd="inkscape tmp/%s_%s.svg -w %s -h %s --export-png=tmp/%s_%s.png"%(self.name,level,self.xp,self.yp,self.name,level)
@@ -170,9 +235,89 @@ class Converter:
 
 
         def createkap(self,level):
-            cmd="./imgkap tmp/%s_%s.png %s %s %s %s %s_%s.kap"%(self.name,level,self.lat0,self.lon0,self.lat1,self.lon1,self.name,level)
+            cmd="./imgkap -Q %s tmp/%s_%s.png %s %s %s %s %s_%s.kap"%(self.scale,self.name,level,self.lat0,self.lon0,self.lat1,self.lon1,self.name,level)
             print cmd
             os.system(cmd)
+
+        def addtitle(self,x0,y0):
+            """
+                FIXME
+                    <image x="200" y="000" width="100" height="100" xlink:href="OpenSeaMap-Logo.svg"/>-->
+                    <text x="250" y="110" font-size="20" text-anchor="middle">http://openstreetmap.org/</text>
+            """
+            self.svg.addimage(x0+80,y0,"OpenSeaMap-Logo.svg")
+            self.svg.addimage(x0-80,y0,"Openstreetmap_logo.svg")
+            self.svg.addtext(x0+50,y0+110,20,"http://openstreetmap.org/")
+            self.svg.addtext(x0+50,y0+150,50,self.title)
+            self.svg.addtext(x0+50,y0+175,20,"Mercator Projection")
+            self.svg.addtext(x0+50,y0+195,20,"Scale 1:%s at %s dpi (for A%s paper)"%(self.scale,self.dpi,self.n))
+            self.svg.addtext(x0+50,y0+215,20,"SOUNDINGS IN METERS")
+            self.svg.addtext(x0+50,y0+235,20,"AT %s"%self.soundingbase)
+            self.svg.addtext(x0+50,y0+255,20,"Heights in meters above WGS84 ellipsoid")
+            self.svg.addtext(x0+50,y0+275,20,"Datum: WGS84")
+            self.svg.addtext(x0+50,y0+295,20,"IALA %s Buoyage System"%self.ialaregime)
+            if self.ialaregime=="A":
+                self.portside="(Red to Port)"
+            elif self.ialaregime=="B":
+                self.portside="(Green to Port)"
+            self.svg.addtext(x0+50,y0+315,16,self.portside)
+            self.svg.addtext(x0+50,y0+345,30,"NOT FOR NAVIGATIONAL USE!")
+            self.svg.addtext(x0+50,y0+365,16,"Contributors cannot take responsibility for the accuracy of the map")
+
+        def addmarginalia(self):
+            """
+                Add marginalia
+            """
+            #h,w are the height and width of the svg image
+            #h100 and w100 are the height and width which will be projected to 100 px
+            viewbox=self.svg.root.get('viewBox').split()
+            h=float(viewbox[3])
+            w=float(viewbox[2])
+            h100=100.0*h/self.yp
+            w100=100.0*w/self.xp
+            # white margin 100px wide
+            self.svg.addrectangle(0,0,w,h100)
+            self.svg.addrectangle(0,0,w100,h)
+            self.svg.addrectangle(w-w100,0,w100,h)
+            self.svg.addrectangle(0,h-h100,w,h100)
+
+            #contributors are listed in the top
+            self.svg.addflowtext(w100,0,w-2*w100,h100,"Contributors: %s"%(", ".join(self.contributors)))
+            #sources in the right margin
+            self.svg.addflowtext(w-w100,h/2,h100*5,w100*0.8,"Sources: %s"%(", ".join(self.sources)),transform="rotate(270,%f,%f)"%(w-w100,h/2))
+
+            #Chart No
+            self.svg.addtext(w-w100*1.5,h-h100*0.3,30,self.chartno)
+            self.svg.addtext(w100*1.5,h-h100*0.3,30,self.chartno)
+            self.svg.addtext(w100/2,h100,30,self.chartno,transform="rotate(90,%f,%f)"%(w100/2,h100))
+            #update information
+            self.svg.addtext(w100*1.5,h-h100*0.8,10,"Last edit: %s"%self.timestamp)
+            self.svg.addtext(w100*1.5,h-h100*0.7,10,"Compiled at: %s"%time.asctime())
+            self.svg.addtext(w100*1.5,h-h100*0.6,10,"Last correction: %s"%self.lastcorrection)
+            #soundings information
+            self.svg.addtext(w-w100*0.5,h100*2,30,"SOUNDINGS IN METERS",transform="rotate(270,%f,%f)"%(w-w100*0.5,h100*2))
+            self.svg.addtext(w*0.5,h-h100/2,30,"SOUNDINGS IN METERS")
+            #notice about updates
+            self.svg.addtext(w100*5.5,h-h100*0.8,20,"CAUTION",style="stroke:#f00080")
+            self.svg.addflowtext(w100*3,h-h100*0.8,w100*5,h100*0.8,self.updatenote,style="stroke:#f00080")
+
+            #title and scale information
+            self.svg.addtext(w-w100*4,h-h100*0.8,20,self.title)
+            self.svg.addtext(w-w100*4,h-h100*0.7,10,"1:%u at %u DPI (for A%u paper)"%(float(self.scale)*(2.0**0.5),float(self.dpi)/(2.0**0.5),int(self.n)-1))
+            self.svg.addtext(w-w100*4,h-h100*0.55,15,"1:%u at %u DPI (for A%u paper)"%(float(self.scale),float(self.dpi),int(self.n)))
+            self.svg.addtext(w-w100*4,h-h100*0.45,10,"1:%u at %u DPI (for A%u paper)"%(float(self.scale)/(2.0**0.5),float(self.dpi)*(2.0**0.5),int(self.n)+1))
+            self.svg.addtext(w-w100*4,h-h100*0.35,10,"1:%u at %u DPI (for A%u paper)"%(float(self.scale)/2.0,float(self.dpi)*2.0,int(self.n)+2))
+
+            # add notices
+            for n in self.notices:
+                x=float(n["x"])*w100/100
+                y=float(n["y"])*h100/100
+                sizex=float(n["width"])*w100/100
+                sizey=float(n["height"])*h100/100
+                self.svg.addtext(x+sizex/2,y+20,20,n['title'],style="stroke:#f00080;")
+                self.svg.addrectangle(x,y,sizex,sizey,style="stroke-width:2;stroke:#f00080;fill:none;")
+                self.svg.addflowtext(x+5,y+20,sizex-10,sizey,n['text'],style="stroke:#f00080;")
+            
                 
         
 Converter(sys.argv[1])

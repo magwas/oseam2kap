@@ -16,13 +16,13 @@ make setup
 
 usage:
 
-./bsbrender <configfile>
+./oseam2kap <configfile>
 
 See example.conf for config file format
 
 examples:
 
-./bsbrender example.conf
+./oseam2kap example.conf
 
-osmfile=/wherever/whatever.osm bsbrender whatever.conf
+osmfile=/wherever/whatever.osm oseam2kap whatever.conf
 
