@@ -64,6 +64,7 @@ class Converter:
         def __init__(self,configfile):
             
             execfile(sys.argv[1],self.__dict__)
+            self.addmargin=False
         
             for i in ['osmfile','name','dpi','n','scale','lat0','lon0']:
                 if os.environ.has_key(i):
@@ -80,10 +81,18 @@ class Converter:
             print self.timestamp
             self.createsvg(16)
             self.addtitle(self.titlepos[0],self.titlepos[1])
-            self.addmarginalia()
-            self.svg.write()
-            self.createpng(16)
-            self.createkap(16)
+            if self.addmargin:
+                self.addmarginalia()
+                self.svg.write()
+                self.createpng(16)
+                self.createkap(16)
+            else:
+                self.svg.write()
+                self.createpng(16)
+                self.createkap(16)
+                self.addmarginalia()
+                self.svg.write()
+                self.createpng(16)
         
         def calculate(self):
             #size in mm
@@ -263,6 +272,21 @@ class Converter:
             self.svg.addtext(x0+50,y0+315,16,self.portside)
             self.svg.addtext(x0+50,y0+345,30,"NOT FOR NAVIGATIONAL USE!")
             self.svg.addtext(x0+50,y0+365,16,"Contributors cannot take responsibility for the accuracy of the map")
+            # add notices
+            viewbox=self.svg.root.get('viewBox').split()
+            h=float(viewbox[3])
+            w=float(viewbox[2])
+            h100=100.0*h/self.yp
+            w100=100.0*w/self.xp
+            for n in self.notices:
+                x=float(n["x"])*w100/100
+                y=float(n["y"])*h100/100
+                sizex=float(n["width"])*w100/100
+                sizey=float(n["height"])*h100/100
+                self.svg.addtext(x+sizex/2,y+20,20,n['title'],style="stroke:#f00080;")
+                self.svg.addrectangle(x,y,sizex,sizey,style="stroke-width:2;stroke:#f00080;fill:none;")
+                self.svg.addflowtext(x+5,y+20,sizex-10,sizey,n['text'],style="stroke:#f00080;")
+            
 
         def addmarginalia(self):
             """
@@ -307,17 +331,6 @@ class Converter:
             self.svg.addtext(w-w100*4,h-h100*0.55,15,"1:%u at %u DPI (for A%u paper)"%(float(self.scale),float(self.dpi),int(self.n)))
             self.svg.addtext(w-w100*4,h-h100*0.45,10,"1:%u at %u DPI (for A%u paper)"%(float(self.scale)/(2.0**0.5),float(self.dpi)*(2.0**0.5),int(self.n)+1))
             self.svg.addtext(w-w100*4,h-h100*0.35,10,"1:%u at %u DPI (for A%u paper)"%(float(self.scale)/2.0,float(self.dpi)*2.0,int(self.n)+2))
-
-            # add notices
-            for n in self.notices:
-                x=float(n["x"])*w100/100
-                y=float(n["y"])*h100/100
-                sizex=float(n["width"])*w100/100
-                sizey=float(n["height"])*h100/100
-                self.svg.addtext(x+sizex/2,y+20,20,n['title'],style="stroke:#f00080;")
-                self.svg.addrectangle(x,y,sizex,sizey,style="stroke-width:2;stroke:#f00080;fill:none;")
-                self.svg.addflowtext(x+5,y+20,sizex-10,sizey,n['text'],style="stroke:#f00080;")
-            
                 
         
 Converter(sys.argv[1])

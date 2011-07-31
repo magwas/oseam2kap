@@ -18,11 +18,11 @@ usage:
 
 ./oseam2kap <configfile>
 
-See example.conf for config file format
+See the configs dir for config file format
 
 examples:
 
-./oseam2kap example.conf
+./oseam2kap configs/B-1.conf
 
 osmfile=/wherever/whatever.osm oseam2kap whatever.conf
 
