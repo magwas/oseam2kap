@@ -1,14 +1,9 @@
 #!/usr/bin/make  -f
 
-all:
+all: imgkap
+	for i in configs/*; do ./oseam2kap $$i; done
 
 clean:  cleandata
-
-cleanosr:
-	rm -rf osr
-
-cleandownloaded: cleanosr
-	rm -rf osmarender renderer imgkap.c imgkap
 
 cleandata:
 	rm -f tmp/*
@@ -16,32 +11,14 @@ cleandata:
 cleanmaps: cleandata
 	rm -f *.kap
 
-cleanall: cleandownloaded cleandata cleanmaps
+cleanall: cleanmaps
+	rm -f imgkap imgkap.c
 
-osmarender:
-	svn co http://svn.openstreetmap.org/applications/rendering/osmarender/
-
-renderer:
-	svn co http://openseamap.svn.sourceforge.net/svnroot/openseamap/renderer
-
-osr/composite: osr
-	./mkcomposites
-
-cleantmp:
-	rm -rf tmp
-
-osr: cleanosr
-	cp -r osmarender osr
-	cp -r renderer/* osr
-	cp -r renderer/SeaMapStyles/* osr/stylesheets
-	cp -r renderer/SeaMapSymbols/* osr/stylesheets/symbols
-
-setup: imgkap osmarender renderer cleanosr osr osr/composite cleantmp
+setup: imgkap cleanosr osr osr/composite cleandata
 	mkdir tmp
 	 
-
 imgkap: imgkap.c
-    patch <imgkap.patch
+	patch <imgkap.patch
 	gcc imgkap.c -lfreeimage -o imgkap
     
 imgkap.c:

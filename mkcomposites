@@ -2,5 +2,6 @@
 mkdir osr/composite
 for i in 12 13 14 15 16 17
 do
-    ./mergestyles.py osr/stylesheets/osm-map-features-z$i.xml osr/SeaMapStyles/osm-seamark-z$i.xml >osr/stylesheets/composite-z$i.xml
+    echo ./mergestyles.py osr/stylesheets/osm-map-features-z$i.xml osr/SeaMapStyles/seamark-z$i.xml 
+    ./mergestyles.py osr/stylesheets/osm-map-features-z$i.xml osr/SeaMapStyles/seamark-z$i.xml >osr/stylesheets/composite-z$i.xml
 done

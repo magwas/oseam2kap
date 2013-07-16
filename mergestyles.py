@@ -32,5 +32,5 @@ for n in rules2.childNodes:
 rules1.setAttribute("showGrid","yes")
 rules1.setAttribute("showLicense","no") #FIXME license moves the chart.
 
-print dom1.toprettyxml()
+print dom1.toprettyxml().encode("UTF-8")
 

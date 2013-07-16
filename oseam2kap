@@ -1,7 +1,5 @@
 #!/usr/bin/python
-# coding=UTF-8
-
-from math import cos,radians
+import math
 import sys
 import os
 import urllib2
@@ -9,11 +7,25 @@ import xml.etree.cElementTree as ET
 import time
 
 
+def deg2num(lat_deg, lon_deg, zoom):
+  lat_rad = math.radians(lat_deg)
+  n = 2.0 ** zoom
+  xtile = int((lon_deg + 180.0) / 360.0 * n)
+  ytile = int((1.0 - math.log(math.tan(lat_rad) + (1 / math.cos(lat_rad))) / math.pi) / 2.0 * n)
+  return (xtile, ytile)
+
+def num2deg(xtile, ytile, zoom):
+  n = 2.0 ** zoom
+  lon_deg = xtile / n * 360.0 - 180.0
+  lat_rad = math.atan(math.sinh(math.pi * (1 - 2 * ytile / n)))
+  lat_deg = math.degrees(lat_rad)
+  return (lat_deg, lon_deg)
+
+
 class Svg:
     def __init__(self,fname):
         self.fname=fname
-        self.dom=ET.parse(fname)
-        self.root=self.dom.getroot()
+        self.dom=ET.fromstring('<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"/>')
 
     def addtext(self,x,y,size,txt,transform=None,style=None):
             """
@@ -22,77 +34,83 @@ class Svg:
             svgimage(x0+00,y0+000,"OpenSeaMap-Logo.svg")
             svgtext(x0+50,y0+110,20,"http://openstreetmap.org/")
             """
-            t=self.root.makeelement('{http://www.w3.org/2000/svg}text',{'x':str(x),'y':str(y),'font-size':str(size), 'text-anchor':'middle'})
+            t=self.dom.makeelement('{http://www.w3.org/2000/svg}text',{'x':str(x),'y':str(y),'font-size':str(size), 'text-anchor':'middle'})
             if transform:
                 t.set("transform",transform)
             if style:
                 t.set("style",style)
             t.text=txt
-            self.root.append(t)
+            self.dom.append(t)
             return t
 
 
     def addimage(self,x,y,fname,sizex=100,sizey=100):
-            t=self.root.makeelement('{http://www.w3.org/2000/svg}image',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey),'{http://www.w3.org/1999/xlink}href':fname})
-            self.root.append(t)
+            t=self.dom.makeelement('{http://www.w3.org/2000/svg}image',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey),'{http://www.w3.org/1999/xlink}href':fname})
+            self.dom.append(t)
             return t
 
     def addrectangle(self,x,y,sizex,sizey,style="fill:white;"):
-            t=self.root.makeelement('{http://www.w3.org/2000/svg}rect',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey),'style':style})
-            self.root.append(t)
+            t=self.dom.makeelement('{http://www.w3.org/2000/svg}rect',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey),'style':style})
+            self.dom.append(t)
             return t
 
     def addflowtext(self,x,y,sizex,sizey,text,fontsize=12,style="stroke:black;",transform=None):
-            root=self.root.makeelement('{http://www.w3.org/2000/svg}flowRoot',{'font-size':str(fontsize),'style':style})
+            root=self.dom.makeelement('{http://www.w3.org/2000/svg}flowRoot',{'font-size':str(fontsize),'style':style})
             if transform:
                 root.set("transform",transform)
-            self.root.append(root)
-            region=self.root.makeelement('{http://www.w3.org/2000/svg}flowRegion',{})
+            self.dom.append(root)
+            region=self.dom.makeelement('{http://www.w3.org/2000/svg}flowRegion',{})
             root.append(region)
-            rect=self.root.makeelement('{http://www.w3.org/2000/svg}rect',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey)})
+            rect=self.dom.makeelement('{http://www.w3.org/2000/svg}rect',{'x':str(x),'y':str(y),'width':str(sizex),'height':str(sizey)})
             region.append(rect)
-            para=self.root.makeelement('{http://www.w3.org/2000/svg}flowPara',{})
+            para=self.dom.makeelement('{http://www.w3.org/2000/svg}flowPara',{})
             para.text=text
             root.append(para)
             return root
 
 
     def write(self):
-            self.dom.write(self.fname)
+      f = open(self.fname,"w")
+      f.write(ET.tostring(self.dom))
+      f.close()
+
 
 class Converter:
         def __init__(self,configfile):
             
             execfile(sys.argv[1],self.__dict__)
-            self.addmargin=False
+            self.addmargin=True
         
             for i in ['osmfile','name','dpi','n','scale','lat0','lon0']:
                 if os.environ.has_key(i):
                     self.__dict__[i]=os.environ[i]
-            self.calculate()
-            self.writegpx()
-            self.getosm()
-            self.getcontributors()
-            print "---------------------------------------------"
-            print self.contributors
-            print "---------------------------------------------"
-            print self.sources
-            print "---------------------------------------------"
-            print self.timestamp
-            self.createsvg(16)
-            self.addtitle(self.titlepos[0],self.titlepos[1])
-            if self.addmargin:
-                self.addmarginalia()
-                self.svg.write()
-                self.createpng(16)
-                self.createkap(16)
-            else:
-                self.svg.write()
-                self.createpng(16)
-                self.createkap(16)
-                self.addmarginalia()
-                self.svg.write()
-                self.createpng(16)
+            #print self.x0,self.y0,self.x1,self.y1
+            if not getattr(self,'zoom',False):
+                self.zoom = 14
+            if getattr(self,'scale',False):
+                self.calculate()
+                print self.lat0, self.lon0
+                (self.x0,self.y0) = deg2num(self.lat0, self.lon0,self.zoom)
+                print self.lat1, self.lon1
+                (self.x1,self.y1) = deg2num(self.lat1, self.lon1,self.zoom)
+            (self.lat0,self.lon0) = num2deg(self.x0,self.y0,self.zoom)
+            (self.lat1,self.lon1) = num2deg(self.x1+1,self.y1+1,self.zoom)
+            svg = Svg("tmp/%s_%s.svg"%(self.name,self.zoom))
+            for x in range(self.x0,self.x1+1):
+                for y in range(self.y0,self.y1+1):
+                  xpix=(x-self.x0)*256
+                  ypix=(y-self.y0)*256
+                  osmfile=self.gettile("osm","http://osm1.wtnet.de/tiles/base",x,y,self.zoom)
+                  seafile=self.gettile("sea","http://t1.openseamap.org/seamark",x,y,self.zoom)
+                  if not osmfile:
+                      raise ValueError, "no osm file"
+                  svg.addimage(xpix,ypix,osmfile,sizex=256,sizey=256)
+                  if seafile:
+                    svg.addimage(xpix,ypix,seafile,sizex=256,sizey=256)
+            svg.write()
+            self.createpng()
+            self.createkap()
+
         
         def calculate(self):
             #size in mm
@@ -114,7 +132,7 @@ class Converter:
             dy=self.yp*self.scale/self.dpi*25.4/1852000
             
             self.lat1=self.lat0-(dy/60)
-            self.lon1=self.lon0+dx/60/cos(radians(self.lat0-dy/30))
+            self.lon1=self.lon0+dx/60/math.cos(math.radians(self.lat0-dy/30))
             
         
         def writegpx(self):
@@ -183,6 +201,22 @@ class Converter:
             self.lat0,self.lon0))
             f.close()
 
+        def gettile(self,nickname,urlbase,x,y,z):
+          url = "%s/%s/%s/%s.png"%(urlbase,z,x,y)
+          #print url
+          try:
+            f = urllib2.urlopen(url)
+          except urllib2.HTTPError:
+            return None
+          ofname = "tmp/%s.%s.%s.%s.png"%(nickname,x,y,z)
+          of=open(ofname,"w")
+          while True:
+            d=f.read()
+            if(d==''):
+                break;
+            of.write(d)
+          return ofname
+
         def getosm(self):
             if not self.__dict__.has_key("osmfile"):
                 self.osmfile="tmp/%s.osm"%self.name
@@ -237,14 +271,15 @@ class Converter:
             os.system(cmd)
             self.svg=Svg("tmp/%s_%s.svg"%(self.name,level))
 
-        def createpng(self,level):
-            cmd="inkscape tmp/%s_%s.svg -w %s -h %s --export-png=tmp/%s_%s.png"%(self.name,level,self.xp,self.yp,self.name,level)
+        def createpng(self):
+            cmd="inkscape tmp/%s_%s.svg -D --export-png=tmp/%s_%s.png"%(self.name,self.zoom,self.name,self.zoom)
             print cmd
             os.system(cmd)
 
 
-        def createkap(self,level):
-            cmd="./imgkap -Q %s tmp/%s_%s.png %s %s %s %s %s_%s.kap"%(self.scale,self.name,level,self.lat0,self.lon0,self.lat1,self.lon1,self.name,level)
+        def createkap(self):
+            #cmd="./imgkap -Q %s tmp/%s_%s.png %s %s %s %s %s_%s.kap"%(self.scale,self.name,self.zoom,self.lat0,self.lon0,self.lat1,self.lon1,self.name,self.zoom)
+            cmd="./imgkap tmp/%s_%s.png %s %s %s %s %s_%s.kap"%(self.name,self.zoom,self.lat0,self.lon0,self.lat1,self.lon1,self.name,self.zoom)
             print cmd
             os.system(cmd)
 
@@ -334,3 +369,7 @@ class Converter:
                 
         
 Converter(sys.argv[1])
+
+
+
+
